@@ -63,8 +63,11 @@ def test_model_7b_fp16_modified():
         )
         tokenizer = AutoTokenizer.from_pretrained(model_id)
         inputs = tokenizer(selected_input, return_tensors="pt", padding=True).to(torch_device)
+        print(f"Tokenized input: {input}")
+
 
         output = model.generate(**inputs, max_new_tokens=20, do_sample=False)
+        output_default=output
         output_text_cache = tokenizer.batch_decode(output, skip_special_tokens=True)
         output_difference = output
 
@@ -76,6 +79,7 @@ def test_model_7b_fp16_modified():
         inputs = tokenizer(selected_input, return_tensors="pt", padding=True).to(torch_device)
         
         output = model.generate(**inputs, max_new_tokens=20, do_sample=False, use_cache=False)
+        output_nocache=output
         output_text_reference = tokenizer.batch_decode(output, skip_special_tokens=True)
         output_difference -= output
         
@@ -88,6 +92,7 @@ def test_model_7b_fp16_modified():
         inputs = tokenizer(selected_input, return_tensors="pt", padding=True).to(torch_device)
         
         output = model.generate(**inputs, max_new_tokens=20, do_sample=False, cache_implementation="static")
+        output_static = output
         output_text_static = tokenizer.batch_decode(output, skip_special_tokens=True)
         output_difference -= output
         
@@ -96,6 +101,11 @@ def test_model_7b_fp16_modified():
         print(f"Text generated with default KV-cache: {output_text_cache}")
         print(f"Text generated with no KV-cache: {output_text_reference}")
         print(f"Text generated with static KV-cache: {output_text_static}")
+        
+
+        print(f"{output_default=}")
+        print(f"{output_nocache=}")
+        print(f"{output_static=}")
         
 
         # print(f"Statistics of numerical difference with and without cache:")
