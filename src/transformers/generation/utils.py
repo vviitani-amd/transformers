@@ -3358,6 +3358,8 @@ class GenerationMixin:
             `return_dict_in_generate=True` or a [`~generation.GenerateEncoderDecoderOutput`] if
             `model.config.is_encoder_decoder=True`.
         """
+        # print("In _sammple()") # see if our change gets executed: YES
+
         # init values
         pad_token_id = generation_config._pad_token_tensor
         output_attentions = generation_config.output_attentions
@@ -3406,6 +3408,17 @@ class GenerationMixin:
         else:
             is_prefill = True
 
+         # Initialize a list to collect scores
+        all_scores = []
+
+        cache_id = "unknown"
+        
+        if isinstance(model_kwargs.get("past_key_values"), StaticCache):
+            cache_id="static"
+
+        if isinstance(model_kwargs.get("past_key_values"), DynamicCache):
+            cache_id="dynamic"
+
         while self._has_unfinished_sequences(this_peer_finished, synced_gpus, device=input_ids.device):
             # prepare model inputs
             model_inputs = self.prepare_inputs_for_generation(input_ids, **model_kwargs)
@@ -3435,6 +3448,9 @@ class GenerationMixin:
 
             # pre-process distribution
             next_token_scores = logits_processor(input_ids, next_token_logits)
+
+             # Collect scores for this step
+            all_scores.append(next_token_scores.cpu().numpy())
 
             # Store scores, attentions and hidden_states when required
             if return_dict_in_generate:
@@ -3481,6 +3497,12 @@ class GenerationMixin:
             # Otherwise a reference to outputs is kept which keeps the logits alive in the next iteration
             del outputs
 
+         # Convert collected scores to a 2D numpy array
+        scores_array = np.vstack(all_scores)
+
+        # Dump the scores to a disk file
+        np.save(f'generated_scores_{cache_id}.npy', scores_array)
+            
         if streamer is not None:
             streamer.end()
 

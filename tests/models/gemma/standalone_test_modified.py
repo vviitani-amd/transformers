@@ -63,13 +63,12 @@ def test_model_7b_fp16_modified():
         )
         tokenizer = AutoTokenizer.from_pretrained(model_id)
         inputs = tokenizer(selected_input, return_tensors="pt", padding=True).to(torch_device)
-        print(f"Tokenized input: {input}")
+        print(f"Tokenized input: {inputs}")
 
 
-        output = model.generate(**inputs, max_new_tokens=20, do_sample=False)
-        output_default=output
-        output_text_cache = tokenizer.batch_decode(output, skip_special_tokens=True)
-        output_difference = output
+        output_default = model.generate(**inputs, max_new_tokens=20, do_sample=False)
+        output_text_cache = tokenizer.batch_decode(output_default, skip_special_tokens=True)
+        # output_difference = output_default
 
         # repeat the same with no caching
         model = AutoModelForCausalLM.from_pretrained(model_id, low_cpu_mem_usage=True, torch_dtype=torch.float16).to(
@@ -78,10 +77,8 @@ def test_model_7b_fp16_modified():
         tokenizer = AutoTokenizer.from_pretrained(model_id)
         inputs = tokenizer(selected_input, return_tensors="pt", padding=True).to(torch_device)
         
-        output = model.generate(**inputs, max_new_tokens=20, do_sample=False, use_cache=False)
-        output_nocache=output
-        output_text_reference = tokenizer.batch_decode(output, skip_special_tokens=True)
-        output_difference -= output
+        output_nocache = model.generate(**inputs, max_new_tokens=20, do_sample=False, use_cache=False)
+        output_text_reference = tokenizer.batch_decode(output_nocache, skip_special_tokens=True)
         
         #test if we can use static cache implementation as reference
 
@@ -91,10 +88,8 @@ def test_model_7b_fp16_modified():
         tokenizer = AutoTokenizer.from_pretrained(model_id)
         inputs = tokenizer(selected_input, return_tensors="pt", padding=True).to(torch_device)
         
-        output = model.generate(**inputs, max_new_tokens=20, do_sample=False, cache_implementation="static")
-        output_static = output
-        output_text_static = tokenizer.batch_decode(output, skip_special_tokens=True)
-        output_difference -= output
+        output_static = model.generate(**inputs, max_new_tokens=20, do_sample=False, cache_implementation="static")
+        output_text_static = tokenizer.batch_decode(output_static, skip_special_tokens=True)
         
 
 
