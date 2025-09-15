@@ -1,49 +1,61 @@
 import numpy as np
 
-file_path='generated_scores_unknown.npy'
-# Load the 2D numpy array from the file
+# file_path='generated_scores_unknown.npy'
+# # Load the 2D numpy array from the file
+# scores_nocache = np.load(file_path)
+
+# file_path='generated_scores_dynamic.npy'
+# # Load the 2D numpy array from the file
+# scores_dynamic = np.load(file_path)
+
+# file_path='generated_scores_static.npy'
+# # Load the 2D numpy array from the file
+# scores_static = np.load(file_path)
+
+# H100
+
+csv_lines=[f'round,"Number of correctly ranked tokens","Percentage of non-zero score differences (all tokens)","Mean difference (all tokens)']
+csv_lines[0] += f',"Percentage of non-zero score differences (top-K tokens)","Mean difference (top-K tokens)"'
+
+print("Score distribution on H100")
+
+file_path='generated_scores_h100_unknown.npy'
 scores_nocache = np.load(file_path)
 
-file_path='generated_scores_dynamic.npy'
-# Load the 2D numpy array from the file
+file_path='generated_scores_h100_dynamic.npy'
 scores_dynamic = np.load(file_path)
 
-file_path='generated_scores_static.npy'
-# Load the 2D numpy array from the file
+file_path='generated_scores_h100_static.npy'
 scores_static = np.load(file_path)
+
 
 #first differing newly generated token between dynamic and reference
 
-first_different_token_dynamic=12
-token_reference=1476
-token_dynamic=1144
+for round in range(20):
+    diff=scores_dynamic[round,:]-scores_nocache[round,:]
+    vocab_size=len(diff)
 
-print("dynamic vs reference")
-print(f"{scores_nocache[first_different_token_dynamic,token_reference]=} {scores_nocache[first_different_token_dynamic,token_dynamic]=}")
-print(f"{scores_dynamic[first_different_token_dynamic,token_reference]=} {scores_dynamic[first_different_token_dynamic,token_dynamic]=}")
-
-first_different_token_static=3
-token_reference=573
-token_static=235265
-
-print("static vs reference")
-print(f"{scores_nocache[first_different_token_static,token_reference]=} {scores_nocache[first_different_token_static,token_static]=}")
-print(f"{scores_static[first_different_token_static,token_reference]=} {scores_static[first_different_token_static,token_static]=}")
+    ranking_nocache=np.argsort(scores_nocache[round,:])
+    ranking_dynamic=np.argsort(scores_dynamic[round,:])
 
 
-# # Print the shape of the array
-# print("Shape of the scores array:", scores_array.shape)
+    num_correctly_ranked=0
+    while scores_dynamic[round,ranking_nocache[num_correctly_ranked]] == scores_dynamic[round,ranking_dynamic[num_correctly_ranked]]:
+        num_correctly_ranked += 1
+        if num_correctly_ranked >= vocab_size:
+            break
 
-# # Print the type of the array elements
-# print("Data type of array elements:", scores_array.dtype)
+    nonzero_percentage=100*np.count_nonzero(diff) / vocab_size
+    mean_absdiff = np.mean(np.abs(diff))
 
-# # # Print a sample of the array contents (first 5 rows)
-# # print("Sample of the scores (first 5 rows):")
-# # print(scores_array[:5])
+    if num_correctly_ranked > 0:
+        nonzero_percentage_top=100*np.count_nonzero(diff[:num_correctly_ranked]) / num_correctly_ranked
+        mean_absdiff_top = np.mean(np.abs(diff[:num_correctly_ranked]))
+    else:
+        nonzero_percentage_top=-1
+        mean_absdiff_top = -1
 
-# # Add any additional inspections needed
-# # For example, statistics or specific value checks
-# print("Statistics of the scores array:")
-# print("Mean:", np.mean(scores_array))
-# print("Standard Deviation:", np.std(scores_array))
+    csv_lines += [f'{round},{num_correctly_ranked},{nonzero_percentage},{mean_absdiff},{nonzero_percentage_top},{mean_absdiff_top}']   
 
+for line in csv_lines:
+    print(line)             
