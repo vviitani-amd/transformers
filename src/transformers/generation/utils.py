@@ -3427,6 +3427,12 @@ class GenerationMixin:
             model_inputs.update({"output_attentions": output_attentions} if output_attentions else {})
             model_inputs.update({"output_hidden_states": output_hidden_states} if output_hidden_states else {})
 
+            print(f'{cache_id=} {cur_len=} #cached values={len(model_kwargs['past_key_values'].value_cache)}')
+            #print(f'{model_kwargs['past_key_values']=}')
+            if 'past_key_values' in model_kwargs and len(model_kwargs['past_key_values'].value_cache) > 0:
+                for layer in range(len(model_kwargs['past_key_values'].value_cache)):
+                    print(f'{cur_len=} {layer=} {model_kwargs['past_key_values'].key_cache[layer].shape=} {model_kwargs['past_key_values'].value_cache[layer].shape=}')
+
             if is_prefill:
                 outputs = self(**model_inputs, return_dict=True)
                 is_prefill = False

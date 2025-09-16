@@ -57,7 +57,7 @@ def test_model_7b_fp16_modified():
     ]
     for selected_input in input_list[-3:-2]:
 
-        print(f"Testing on {selected_input=}")
+value stats        print(f"Testing on {selected_input=}")
         model = AutoModelForCausalLM.from_pretrained(model_id, low_cpu_mem_usage=True, torch_dtype=torch.float16).to(
             torch_device
         )
