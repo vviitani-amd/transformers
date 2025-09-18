@@ -4,6 +4,7 @@ from transformers.testing_utils import (
     torch_device,
 )
 
+from globals import GlobalVariables
 
 def test_model_7b_fp16_modified():
     
@@ -57,7 +58,9 @@ def test_model_7b_fp16_modified():
     ]
     for selected_input in input_list[-3:-2]:
 
-value stats        print(f"Testing on {selected_input=}")
+        print(f"Testing on {selected_input=}")
+
+        GlobalVariables.cache_id="dynamic"
         model = AutoModelForCausalLM.from_pretrained(model_id, low_cpu_mem_usage=True, torch_dtype=torch.float16).to(
             torch_device
         )
@@ -70,6 +73,7 @@ value stats        print(f"Testing on {selected_input=}")
         output_text_cache = tokenizer.batch_decode(output_default, skip_special_tokens=True)
         # output_difference = output_default
 
+        GlobalVariables.cache_id="no_cache"
         # repeat the same with no caching
         model = AutoModelForCausalLM.from_pretrained(model_id, low_cpu_mem_usage=True, torch_dtype=torch.float16).to(
             torch_device
@@ -80,50 +84,29 @@ value stats        print(f"Testing on {selected_input=}")
         output_nocache = model.generate(**inputs, max_new_tokens=20, do_sample=False, use_cache=False)
         output_text_reference = tokenizer.batch_decode(output_nocache, skip_special_tokens=True)
         
-        #test if we can use static cache implementation as reference
+        # #test if we can use static cache implementation as reference
 
-        model = AutoModelForCausalLM.from_pretrained(model_id, low_cpu_mem_usage=True, torch_dtype=torch.float16).to(
-            torch_device
-        )
-        tokenizer = AutoTokenizer.from_pretrained(model_id)
-        inputs = tokenizer(selected_input, return_tensors="pt", padding=True).to(torch_device)
+        # model = AutoModelForCausalLM.from_pretrained(model_id, low_cpu_mem_usage=True, torch_dtype=torch.float16).to(
+        #     torch_device
+        # )
+        # tokenizer = AutoTokenizer.from_pretrained(model_id)
+        # inputs = tokenizer(selected_input, return_tensors="pt", padding=True).to(torch_device)
         
-        output_static = model.generate(**inputs, max_new_tokens=20, do_sample=False, cache_implementation="static")
-        output_text_static = tokenizer.batch_decode(output_static, skip_special_tokens=True)
+        # output_static = model.generate(**inputs, max_new_tokens=20, do_sample=False, cache_implementation="static")
+        # output_text_static = tokenizer.batch_decode(output_static, skip_special_tokens=True)
         
 
 
         print(f"Text generated with default KV-cache: {output_text_cache}")
         print(f"Text generated with no KV-cache: {output_text_reference}")
-        print(f"Text generated with static KV-cache: {output_text_static}")
+        # print(f"Text generated with static KV-cache: {output_text_static}")
         
 
-        print(f"{output_default=}")
-        print(f"{output_nocache=}")
-        print(f"{output_static=}")
+        # print(f"{output_default=}")
+        # print(f"{output_nocache=}")
+        # print(f"{output_static=}")
         
 
-        # print(f"Statistics of numerical difference with and without cache:")
-
-        # # Convert the tensor to a floating point type
-        # output_difference = output_difference.float()
-        # # Calculate statistics
-        # mean_value = torch.mean(output_difference)
-        # std_dev = torch.std(output_difference)
-        # min_value = torch.min(output_difference)
-        # max_value = torch.max(output_difference)
-        # median_value = torch.median(output_difference)
-        # max_abs_value = torch.max(torch.abs(output_difference))
-        # zero_count = torch.sum(output_difference == 0).item()
-        # zero_fraction = zero_count / output_difference.numel()
-        # tensor_shape = output_difference.shape
-        # # Print statistics
-        # print(f"Standard Deviation: {std_dev.item()}")
-        # print(f"Maximum Absolute Difference: {max_abs_value.item()}")
-        # print(f"Count of Zeros: {zero_count}")
-        # print(f"Fraction of Zeros: {zero_fraction:.4f}")
-        # print(f"Tensor Shape: {tensor_shape}")
-        
 
 if __name__ == "__main__":
     test_model_7b_fp16_modified()

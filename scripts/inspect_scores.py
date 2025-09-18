@@ -14,33 +14,56 @@ import numpy as np
 
 # H100
 
+# id1="unknown"
+# id2="h100_unknown"
+
+# print(f'Comparing score distributions {id1} vs {id2}')
+# print("MI300 reference vs H100 reference")
+
+# id1="dynamic"
+# id2="h100_unknown"
+
+# print(f'Comparing score distributions {id1} vs {id2}')
+# print("MI300 dynamic vs H100 reference")
+
+
+
+# id1="unknown"
+# id2="h100_dynamic"
+
+# print(f'Comparing score distributions {id1} vs {id2}')
+# print("MI300 reference vs H100 dynamic")
+
+id1="dynamic"
+id2="h100_dynamic"
+
+print(f'Comparing score distributions {id1} vs {id2}')
+print("MI300 dynamic vs H100 dynamic")
+
+
 csv_lines=[f'round,"Number of correctly ranked tokens","Percentage of non-zero score differences (all tokens)","Mean difference (all tokens)']
 csv_lines[0] += f',"Percentage of non-zero score differences (top-K tokens)","Mean difference (top-K tokens)"'
 
-print("Score distribution on H100")
 
-file_path='generated_scores_h100_unknown.npy'
-scores_nocache = np.load(file_path)
+file_path=f'generated_scores_{id1}.npy'
+scores1 = np.load(file_path)
 
-file_path='generated_scores_h100_dynamic.npy'
-scores_dynamic = np.load(file_path)
-
-file_path='generated_scores_h100_static.npy'
-scores_static = np.load(file_path)
+file_path=f'generated_scores_{id2}.npy'
+scores2 = np.load(file_path)
 
 
 #first differing newly generated token between dynamic and reference
 
 for round in range(20):
-    diff=scores_dynamic[round,:]-scores_nocache[round,:]
+    diff=scores2[round,:]-scores1[round,:]
     vocab_size=len(diff)
 
-    ranking_nocache=np.argsort(scores_nocache[round,:])
-    ranking_dynamic=np.argsort(scores_dynamic[round,:])
+    ranking1=np.argsort(scores1[round,:])
+    ranking2=np.argsort(scores2[round,:])
 
 
     num_correctly_ranked=0
-    while scores_dynamic[round,ranking_nocache[num_correctly_ranked]] == scores_dynamic[round,ranking_dynamic[num_correctly_ranked]]:
+    while scores2[round,ranking1[num_correctly_ranked]] == scores2[round,ranking2[num_correctly_ranked]]:
         num_correctly_ranked += 1
         if num_correctly_ranked >= vocab_size:
             break
