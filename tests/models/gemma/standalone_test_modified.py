@@ -102,6 +102,12 @@ def test_model_7b_fp16_modified():
         # print(f"Text generated with static KV-cache: {output_text_static}")
         
 
+        print("Analysis of collected hidden states (input to the first layer)")
+
+        for id in GlobalVariables.hidden_states:
+            available_lengths=[l for l in GlobalVariables.hidden_states[id]]
+            print(f"Cache type {id} {available_lengths=}")
+
         # print(f"{output_default=}")
         # print(f"{output_nocache=}")
         # print(f"{output_static=}")

@@ -58,6 +58,8 @@ if is_torch_flex_attn_available():
     from ...integrations.flex_attention import make_flex_block_causal_mask
 
 
+from globals import GlobalVariables
+
 logger = logging.get_logger(__name__)
 
 _CHECKPOINT_FOR_DOC = "google/gemma-7b"
@@ -550,7 +552,14 @@ class GemmaModel(GemmaPreTrainedModel):
         normalizer = torch.tensor(self.config.hidden_size**0.5, dtype=hidden_states.dtype)
         hidden_states = hidden_states * normalizer
 
+        # print(f"{GlobalVariables.cache_id=} {GlobalVariables.cur_len=} Initial hidden state shape: {hidden_states.shape}")
         # decoder layers
+
+        if GlobalVariables.cache_id not in GlobalVariables.hidden_states:
+            GlobalVariables.hidden_states[GlobalVariables.cache_id] = {}
+
+        GlobalVariables.hidden_states[GlobalVariables.cache_id][GlobalVariables.cur_len] = hidden_states.clone()     
+
         all_hidden_states = () if output_hidden_states else None
         all_self_attns = () if output_attentions else None
 
@@ -575,6 +584,8 @@ class GemmaModel(GemmaPreTrainedModel):
                 all_self_attns += (layer_outputs[1],)
 
         hidden_states = self.norm(hidden_states)
+
+
 
         # add hidden states from the last decoder layer
         if output_hidden_states:
