@@ -555,10 +555,11 @@ class GemmaModel(GemmaPreTrainedModel):
         # print(f"{GlobalVariables.cache_id=} {GlobalVariables.cur_len=} Initial hidden state shape: {hidden_states.shape}")
         # decoder layers
 
-        if GlobalVariables.cache_id not in GlobalVariables.hidden_states:
-            GlobalVariables.hidden_states[GlobalVariables.cache_id] = {}
+        if GlobalVariables.cur_len <= GlobalVariables.output_length_cutoff:
+            if GlobalVariables.cache_id not in GlobalVariables.hidden_states:
+                GlobalVariables.hidden_states[GlobalVariables.cache_id] = {}
 
-        GlobalVariables.hidden_states[GlobalVariables.cache_id][GlobalVariables.cur_len] = hidden_states.clone()     
+            GlobalVariables.hidden_states[GlobalVariables.cache_id][GlobalVariables.cur_len] = hidden_states.clone()     
 
         all_hidden_states = () if output_hidden_states else None
         all_self_attns = () if output_attentions else None

@@ -108,6 +108,33 @@ def test_model_7b_fp16_modified():
             available_lengths=[l for l in GlobalVariables.hidden_states[id]]
             print(f"Cache type {id} {available_lengths=}")
 
+        # check that for option no_cache, the hidden state tensor just extends
+        # the tensor from previous round with one column, the elements staying the same otherwise
+
+        id="no_cache"
+        for l in GlobalVariables.hidden_states[id]:
+            t=GlobalVariables.hidden_states[id][l]
+            print(f"{l=} hidden state tensor shape: {t.shape}")  
+            # print(t) 
+            if l-1 in GlobalVariables.hidden_states[id]:
+                slice=t[:,:-1,:]
+                print(f"{slice.shape=}")
+                result="EQUAL" if torch.all(torch.eq(slice,GlobalVariables.hidden_states[id][l-1])) else "NOT EQUAL"
+                print(f"Existing columns of round {l} hidden states {result} to round {l-1} hidden states")
+
+            dyn=GlobalVariables.hidden_states["dynamic"][l]
+
+            result="NOT COMPATIBLE"
+
+            if t.shape==dyn.shape:
+                if torch.all(torch.eq(t,dyn)):
+                    result="COMPATIBLE"
+            else:        
+                if torch.all(torch.eq(t[:,-1:,:],dyn)):
+                    result="COMPATIBLE"
+
+            print(f"Initial hidden states {result} between dynamic caching and no caching on round {l}")    
+
         # print(f"{output_default=}")
         # print(f"{output_nocache=}")
         # print(f"{output_static=}")
