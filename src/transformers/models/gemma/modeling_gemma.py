@@ -253,10 +253,46 @@ class GemmaAttention(nn.Module):
         cos, sin = position_embeddings
         query_states, key_states = apply_rotary_pos_emb(query_states, key_states, cos, sin)
 
+
+        if GlobalVariables.cur_len <= GlobalVariables.output_length_cutoff:
+              if GlobalVariables.cache_id not in GlobalVariables.key_states_precache:
+                GlobalVariables.key_states_precache[GlobalVariables.cache_id] = {}
+              
+              if GlobalVariables.cur_len not in GlobalVariables.key_states_precache[GlobalVariables.cache_id]:
+                GlobalVariables.key_states_precache[GlobalVariables.cache_id][GlobalVariables.cur_len]={}
+
+              GlobalVariables.key_states_precache[GlobalVariables.cache_id][GlobalVariables.cur_len][self.layer_idx] = key_states
+
+              if GlobalVariables.cache_id not in GlobalVariables.value_states_precache:
+                GlobalVariables.value_states_precache[GlobalVariables.cache_id] = {}
+              
+              if GlobalVariables.cur_len not in GlobalVariables.value_states_precache[GlobalVariables.cache_id]:
+                GlobalVariables.value_states_precache[GlobalVariables.cache_id][GlobalVariables.cur_len]={}
+
+              GlobalVariables.value_states_precache[GlobalVariables.cache_id][GlobalVariables.cur_len][self.layer_idx] = value_states  
+
         if past_key_value is not None:
             # sin and cos are specific to RoPE models; cache_position needed for the static cache
             cache_kwargs = {"sin": sin, "cos": cos, "cache_position": cache_position}
             key_states, value_states = past_key_value.update(key_states, value_states, self.layer_idx, cache_kwargs)
+
+        if GlobalVariables.cur_len <= GlobalVariables.output_length_cutoff:
+              if GlobalVariables.cache_id not in GlobalVariables.key_states_postcache:
+                GlobalVariables.key_states_postcache[GlobalVariables.cache_id] = {}
+              
+              if GlobalVariables.cur_len not in GlobalVariables.key_states_postcache[GlobalVariables.cache_id]:
+                GlobalVariables.key_states_postcache[GlobalVariables.cache_id][GlobalVariables.cur_len]={}
+
+              GlobalVariables.key_states_postcache[GlobalVariables.cache_id][GlobalVariables.cur_len][self.layer_idx] = key_states
+
+              if GlobalVariables.cache_id not in GlobalVariables.value_states_postcache:
+                GlobalVariables.value_states_postcache[GlobalVariables.cache_id] = {}
+              
+              if GlobalVariables.cur_len not in GlobalVariables.value_states_postcache[GlobalVariables.cache_id]:
+                GlobalVariables.value_states_postcache[GlobalVariables.cache_id][GlobalVariables.cur_len]={}
+
+              GlobalVariables.value_states_postcache[GlobalVariables.cache_id][GlobalVariables.cur_len][self.layer_idx] = value_states  
+
 
         attention_interface: Callable = eager_attention_forward
 
