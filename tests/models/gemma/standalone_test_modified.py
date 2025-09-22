@@ -165,7 +165,15 @@ def key_value_checks():
             print(f'{round=} {layer_idx=} {d[round][layer_idx].shape=}')
 
     # inspect the stored keys and values for
-    # - first round after prefill (5), layer=0 
+    # - prefill round (4)
+
+    for layer in GlobalVariables.key_states_postcache["dynamic"][5]:
+        compare_kv_states(round=4, layer=layer, tensor_id="key")
+        compare_kv_states(round=4, layer=layer, tensor_id="value")
+
+
+    # inspect the stored keys and values for
+    # - first round after prefill (5)
 
     for layer in GlobalVariables.key_states_postcache["dynamic"][5]:
         compare_kv_states(round=5, layer=layer, tensor_id="key")
@@ -179,21 +187,32 @@ def compare_kv_states(*,round:int, layer:int, tensor_id:str):
   
     assert tensor_id=="key" or tensor_id=="value"
 
+    prefill=False
+    prefill_indicator=""
+    if round==4:
+        prefill=True
+        prefill_indicator="PREFILL "
+
+
+
+
     if tensor_id=="key":
         t_pre=GlobalVariables.key_states_precache[id][round][layer]
         t_post=GlobalVariables.key_states_postcache[id][round][layer]
     else:
         t_pre=GlobalVariables.value_states_precache[id][round][layer]
         t_post=GlobalVariables.value_states_postcache[id][round][layer]
-   
-    s=t_post[:,:,-1:,:]
+    if prefill:
+        s=t_post
+    else:        
+        s=t_post[:,:,-1:,:]
 
     if torch.all(torch.eq(t_pre,s)):
         result="EQUAL"
     else:
         result="NOT EQUAL"            
 
-    print(f"{round=} {layer=}: pre-cache {tensor_id} tensor {result} to corresponding column in {tensor_id} tensor augmented with cache")
+    print(f"{prefill_indicator}{round=} {layer=}: pre-cache {tensor_id} tensor {result} to corresponding column in {tensor_id} tensor augmented with cache")
     print(f"{t_pre.shape=} {s.shape=} ")
 
 
@@ -212,12 +231,27 @@ def compare_kv_states(*,round:int, layer:int, tensor_id:str):
     else:
         result="NOT EQUAL"            
 
-    print(f"{round=} {layer=}: Post-cache {tensor_id} tensors {result} with dynamic cache and no cache")
+    print(f"{prefill_indicator}{round=} {layer=}: Post-cache {tensor_id} tensors {result} with dynamic cache and no cache")
     print(f"{t_post_dynamic.shape=} {t_post_nocache.shape=} ")
 
+    if not prefill:
+        # check if the values fetched on one round match the tensor in cache on the previous round
+
+        if tensor_id=="key":
+            t_prev=GlobalVariables.key_states_postcache[id][round-1][layer]
+            t_current=GlobalVariables.key_states_postcache[id][round][layer]
+        else:
+            t_prev=GlobalVariables.value_states_postcache[id][round-1][layer]
+            t_current=GlobalVariables.value_states_postcache[id][round][layer]       
+
+        s=t_current[:,:,:-1,:]
+        if torch.all(torch.eq(t_prev,s)):
+            result="EQUAL"
+        else:
+            result="NOT EQUAL"            
+        print(f"{t_prev.shape=} {t_current.shape=} {s.shape=}")
+        print(f"{round=} {layer=}: Columns of post-cache {tensor_id} tensor {result} with the previous round")
     
-
-
 
 if __name__ == "__main__":
     test_model_7b_fp16_modified()
