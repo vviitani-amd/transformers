@@ -253,6 +253,20 @@ class GemmaAttention(nn.Module):
         cos, sin = position_embeddings
         query_states, key_states = apply_rotary_pos_emb(query_states, key_states, cos, sin)
 
+        # print(f'Storing pre-cache key tensor shape {key_states.shape=}')
+
+        if GlobalVariables.key_states_precache is None:
+            GlobalVariables.key_states_precache = {}
+
+        if GlobalVariables.key_states_postcache is None:
+            GlobalVariables.key_states_postcache = {}
+    
+        if GlobalVariables.value_states_precache is None:
+            GlobalVariables.value_states_precache = {}
+
+        if GlobalVariables.value_states_postcache is None:
+            GlobalVariables.value_states_postcache = {}
+    
 
         if GlobalVariables.cur_len <= GlobalVariables.output_length_cutoff:
               if GlobalVariables.cache_id not in GlobalVariables.key_states_precache:
@@ -261,7 +275,7 @@ class GemmaAttention(nn.Module):
               if GlobalVariables.cur_len not in GlobalVariables.key_states_precache[GlobalVariables.cache_id]:
                 GlobalVariables.key_states_precache[GlobalVariables.cache_id][GlobalVariables.cur_len]={}
 
-              GlobalVariables.key_states_precache[GlobalVariables.cache_id][GlobalVariables.cur_len][self.layer_idx] = key_states
+              GlobalVariables.key_states_precache[GlobalVariables.cache_id][GlobalVariables.cur_len][self.layer_idx] = key_states.clone()
 
               if GlobalVariables.cache_id not in GlobalVariables.value_states_precache:
                 GlobalVariables.value_states_precache[GlobalVariables.cache_id] = {}
@@ -269,7 +283,7 @@ class GemmaAttention(nn.Module):
               if GlobalVariables.cur_len not in GlobalVariables.value_states_precache[GlobalVariables.cache_id]:
                 GlobalVariables.value_states_precache[GlobalVariables.cache_id][GlobalVariables.cur_len]={}
 
-              GlobalVariables.value_states_precache[GlobalVariables.cache_id][GlobalVariables.cur_len][self.layer_idx] = value_states  
+              GlobalVariables.value_states_precache[GlobalVariables.cache_id][GlobalVariables.cur_len][self.layer_idx] = value_states.clone()  
 
         if past_key_value is not None:
             # sin and cos are specific to RoPE models; cache_position needed for the static cache
@@ -283,7 +297,7 @@ class GemmaAttention(nn.Module):
               if GlobalVariables.cur_len not in GlobalVariables.key_states_postcache[GlobalVariables.cache_id]:
                 GlobalVariables.key_states_postcache[GlobalVariables.cache_id][GlobalVariables.cur_len]={}
 
-              GlobalVariables.key_states_postcache[GlobalVariables.cache_id][GlobalVariables.cur_len][self.layer_idx] = key_states
+              GlobalVariables.key_states_postcache[GlobalVariables.cache_id][GlobalVariables.cur_len][self.layer_idx] = key_states.clone()
 
               if GlobalVariables.cache_id not in GlobalVariables.value_states_postcache:
                 GlobalVariables.value_states_postcache[GlobalVariables.cache_id] = {}
@@ -291,7 +305,7 @@ class GemmaAttention(nn.Module):
               if GlobalVariables.cur_len not in GlobalVariables.value_states_postcache[GlobalVariables.cache_id]:
                 GlobalVariables.value_states_postcache[GlobalVariables.cache_id][GlobalVariables.cur_len]={}
 
-              GlobalVariables.value_states_postcache[GlobalVariables.cache_id][GlobalVariables.cur_len][self.layer_idx] = value_states  
+              GlobalVariables.value_states_postcache[GlobalVariables.cache_id][GlobalVariables.cur_len][self.layer_idx] = value_states.clone()  
 
 
         attention_interface: Callable = eager_attention_forward
@@ -590,6 +604,9 @@ class GemmaModel(GemmaPreTrainedModel):
 
         # print(f"{GlobalVariables.cache_id=} {GlobalVariables.cur_len=} Initial hidden state shape: {hidden_states.shape}")
         # decoder layers
+
+        if GlobalVariables.hidden_states is None:
+            GlobalVariables.hidden_states = {}
 
         if GlobalVariables.cur_len <= GlobalVariables.output_length_cutoff:
             if GlobalVariables.cache_id not in GlobalVariables.hidden_states:

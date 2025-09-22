@@ -135,6 +135,48 @@ def test_model_7b_fp16_modified():
 
             print(f"Initial hidden states {result} between dynamic caching and no caching on round {l}")    
 
+        # inspect pre-cache keys
+
+        layer_idx=0
+        for id in GlobalVariables.key_states_precache:
+            d=GlobalVariables.key_states_precache[id]
+            rounds = [r for r in d]
+            print(f"Pre-cache keys available for rounds {rounds} for cache type {id}")
+            for round in rounds:
+                print(f'{round=} {layer_idx=} {d[round][layer_idx].shape=}')
+
+
+        # inspect post-cache keys
+
+        layer_idx=0
+        for id in GlobalVariables.key_states_postcache:
+            d=GlobalVariables.key_states_postcache[id]
+            rounds = [r for r in d]
+            print(f"Post-cache keys available for rounds {rounds} for cache type {id}")
+            for round in rounds:
+                print(f'{round=} {layer_idx=} {d[round][layer_idx].shape=}')
+
+        # inspect the stored key values for
+        # - dynamic cache
+        # - first round after prefill (5) 
+
+        id="dynamic"
+        round=5
+
+        t_pre=GlobalVariables.key_states_precache[id][round][layer_idx]
+        t_post=GlobalVariables.key_states_postcache[id][round][layer_idx]
+
+        s=t_post[:,:,-1:,:]
+
+        if torch.all(torch.eq(t_pre,s)):
+            result="EQUAL"
+        else:
+            result="NOT EQUAL"            
+
+        print(f"pre-cache key tensor {result} to corresponding column in key tensor augmented with cache")
+
+        print(f"{t_pre.shape=} {s.shape=} ")
+
         # print(f"{output_default=}")
         # print(f"{output_nocache=}")
         # print(f"{output_static=}")
