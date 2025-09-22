@@ -101,7 +101,15 @@ def test_model_7b_fp16_modified():
         print(f"Text generated with no KV-cache: {output_text_reference}")
         # print(f"Text generated with static KV-cache: {output_text_static}")
         
+        hidden_state_checks()
+        key_value_checks()      
 
+        # print(f"{output_default=}")
+        # print(f"{output_nocache=}")
+        # print(f"{output_static=}")
+        
+def hidden_state_checks():
+    
         print("Analysis of collected hidden states (input to the first layer)")
 
         for id in GlobalVariables.hidden_states:
@@ -134,13 +142,6 @@ def test_model_7b_fp16_modified():
                     result="COMPATIBLE"
 
             print(f"Initial hidden states {result} between dynamic caching and no caching on round {l}")    
-
-        key_value_checks()      
-
-        # print(f"{output_default=}")
-        # print(f"{output_nocache=}")
-        # print(f"{output_static=}")
-        
 
 def key_value_checks():
      # inspect pre-cache keys
