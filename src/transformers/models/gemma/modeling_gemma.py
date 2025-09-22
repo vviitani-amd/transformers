@@ -621,6 +621,19 @@ class GemmaModel(GemmaPreTrainedModel):
             if output_hidden_states:
                 all_hidden_states += (hidden_states,)
 
+        if GlobalVariables.hidden_states is None:
+            GlobalVariables.hidden_states = {}
+
+            if GlobalVariables.cur_len <= GlobalVariables.output_length_cutoff:
+                if GlobalVariables.cache_id not in GlobalVariables.input_hidden_states:
+                    GlobalVariables.input_hidden_states[GlobalVariables.cache_id] = {}
+
+                    if GlobalVariables.cur_len not in GlobalVariables.input_hidden_states[GlobalVariables.cache_id]:
+                        GlobalVariables.input_hidden_states[GlobalVariables.cache_id][GlobalVariables.cur_len]={}
+
+                GlobalVariables.hidden_states[GlobalVariables.cache_id][GlobalVariables.cur_len] = hidden_states.clone()     
+
+
             layer_outputs = decoder_layer(
                 hidden_states,
                 attention_mask=causal_mask,
