@@ -143,12 +143,17 @@ def hidden_state_checks():
 
             print(f"Initial hidden states {result} between dynamic caching and no caching on round {len}")    
 
-            # print out the shapes of all the recorded internal hidden state tensors
-            for id in GlobalVariables.input_hidden_states:
-                for len in GlobalVariables.input_hidden_states[id]:
-                    for layer in GlobalVariables.input_hidden_states[id][len]:
-                        t=GlobalVariables.input_hidden_states[id][len][layer]
-                        print(f"{id=} {len=} {layer=} input hidden state tensor shape:{t.shape} ")
+        # print out the shapes of all the recorded internal hidden state tensors
+        for id in GlobalVariables.input_hidden_states:
+            for len in GlobalVariables.input_hidden_states[id]:
+                for layer in GlobalVariables.input_hidden_states[id][len]:
+                    t=GlobalVariables.input_hidden_states[id][len][layer]
+                    print(f"{id=} {len=} {layer=} input hidden state tensor shape:{t.shape} ")
+
+        for round in GlobalVariables.input_hidden_states["dynamic"]:
+            for layer in GlobalVariables.input_hidden_states["dynamic"][round]:
+                compare_hidden_states(round=round, layer=layer)
+                
 
 def key_value_checks():
      # inspect pre-cache keys
@@ -259,6 +264,29 @@ def compare_kv_states(*,round:int, layer:int, tensor_id:str):
             result="NOT EQUAL"            
         print(f"{t_prev.shape=} {t_current.shape=} {s.shape=}")
         print(f"{round=} {layer=}: Columns of post-cache {tensor_id} tensor {result} with the previous round")
+
+def compare_hidden_states(*,round:int, layer:int):
+
+    prefill=False
+    prefill_indicator=""
+    if round==4:
+        prefill=True
+        prefill_indicator="PREFILL "
+
+    t_dyn=GlobalVariables.input_hidden_states["dynamic"][round][layer]
+    t_ref=GlobalVariables.input_hidden_states["no_cache"][round][layer]
+    
+    if prefill:
+        s=t_ref
+    else:        
+        s=t_ref[:,-1:,:]
+
+    if torch.all(torch.eq(t_dyn,s)):
+        result="EQUAL"
+    else:
+        result="NOT EQUAL"            
+
+    print(f"{prefill_indicator}{round=} {layer=}: input hidden state (dynamic caching) {result} to corresponding column in hidden state tensor without cache")
     
 
 if __name__ == "__main__":
