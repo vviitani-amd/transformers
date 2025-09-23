@@ -120,17 +120,17 @@ def hidden_state_checks():
         # the tensor from previous round with one column, the elements staying the same otherwise
 
         id="no_cache"
-        for l in GlobalVariables.hidden_states[id]:
-            t=GlobalVariables.hidden_states[id][l]
+        for len in GlobalVariables.hidden_states[id]:
+            t=GlobalVariables.hidden_states[id][len]
             print(f"{l=} hidden state tensor shape: {t.shape}")  
             # print(t) 
-            if l-1 in GlobalVariables.hidden_states[id]:
+            if len-1 in GlobalVariables.hidden_states[id]:
                 slice=t[:,:-1,:]
                 print(f"{slice.shape=}")
                 result="EQUAL" if torch.all(torch.eq(slice,GlobalVariables.hidden_states[id][l-1])) else "NOT EQUAL"
-                print(f"Existing columns of round {l} hidden states {result} to round {l-1} hidden states")
+                print(f"Existing columns of round {len} hidden states {result} to round {len-1} hidden states")
 
-            dyn=GlobalVariables.hidden_states["dynamic"][l]
+            dyn=GlobalVariables.hidden_states["dynamic"][len]
 
             result="NOT COMPATIBLE"
 
@@ -142,6 +142,13 @@ def hidden_state_checks():
                     result="COMPATIBLE"
 
             print(f"Initial hidden states {result} between dynamic caching and no caching on round {l}")    
+
+            # print out the shapes of all the recorded internal hidden state tensors
+            for id in GlobalVariables.input_hidden_states:
+                for len in GlobalVariables.input_hidden_states[id]:
+                    for layer in GlobalVariables.input_hidden_states[id][len]:
+                        t=GlobalVariables.input_hidden_states[id][len][layer]
+                        print(f"{id=} {len=} {layer=} input hidden state tensor shape:{t.shape} ")
 
 def key_value_checks():
      # inspect pre-cache keys
