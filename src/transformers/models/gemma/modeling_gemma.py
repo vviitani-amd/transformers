@@ -630,13 +630,18 @@ class GemmaModel(GemmaPreTrainedModel):
 
         layer_idx=0
         for decoder_layer in self.layers[: self.config.num_hidden_layers]:
+            
+            print(f"{layer_idx=} {decoder_layer}")  
+
+
             if output_hidden_states:
                 all_hidden_states += (hidden_states,)
 
             if GlobalVariables.cur_len <= GlobalVariables.output_length_cutoff:
                 GlobalVariables.input_hidden_states[GlobalVariables.cache_id][GlobalVariables.cur_len][layer_idx] = hidden_states.clone() 
-            layer_idx += 1        
+            layer_idx += 1       
 
+            
             layer_outputs = decoder_layer(
                 hidden_states,
                 attention_mask=causal_mask,
