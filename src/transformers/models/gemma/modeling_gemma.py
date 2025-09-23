@@ -608,11 +608,22 @@ class GemmaModel(GemmaPreTrainedModel):
         if GlobalVariables.hidden_states is None:
             GlobalVariables.hidden_states = {}
 
+        if GlobalVariables.input_hidden_states is None:
+            GlobalVariables.input_hidden_states = {}
+
+
         if GlobalVariables.cur_len <= GlobalVariables.output_length_cutoff:
             if GlobalVariables.cache_id not in GlobalVariables.hidden_states:
                 GlobalVariables.hidden_states[GlobalVariables.cache_id] = {}
 
             GlobalVariables.hidden_states[GlobalVariables.cache_id][GlobalVariables.cur_len] = hidden_states.clone()     
+
+            if GlobalVariables.cache_id not in GlobalVariables.input_hidden_states:
+                GlobalVariables.input_hidden_states[GlobalVariables.cache_id] = {}
+
+            if GlobalVariables.cur_len not in GlobalVariables.input_hidden_states[GlobalVariables.cache_id]:
+                GlobalVariables.input_hidden_states[GlobalVariables.cache_id][GlobalVariables.cur_len]={}
+
 
         all_hidden_states = () if output_hidden_states else None
         all_self_attns = () if output_attentions else None
@@ -621,18 +632,8 @@ class GemmaModel(GemmaPreTrainedModel):
             if output_hidden_states:
                 all_hidden_states += (hidden_states,)
 
-        if GlobalVariables.hidden_states is None:
-            GlobalVariables.hidden_states = {}
-
             if GlobalVariables.cur_len <= GlobalVariables.output_length_cutoff:
-                if GlobalVariables.cache_id not in GlobalVariables.input_hidden_states:
-                    GlobalVariables.input_hidden_states[GlobalVariables.cache_id] = {}
-
-                    if GlobalVariables.cur_len not in GlobalVariables.input_hidden_states[GlobalVariables.cache_id]:
-                        GlobalVariables.input_hidden_states[GlobalVariables.cache_id][GlobalVariables.cur_len]={}
-
-                GlobalVariables.hidden_states[GlobalVariables.cache_id][GlobalVariables.cur_len] = hidden_states.clone()     
-
+                GlobalVariables.input_hidden_states[GlobalVariables.cache_id][GlobalVariables.cur_len][decoder_layer] = hidden_states.clone()     
 
             layer_outputs = decoder_layer(
                 hidden_states,

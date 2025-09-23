@@ -2,6 +2,7 @@ class GlobalVariables:
     cache_id:str = ""
     cur_len:int = -1
     hidden_states=None
+    input_hidden_states=None
     
     key_states_precache=None
     value_states_precache=None
