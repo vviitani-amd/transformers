@@ -2,35 +2,32 @@ import torch
 from globals import GlobalVariables
 import pickle
 
-def load_global_variables(filename="global_variables_MI300.pkl"):
-    with open(filename, 'rb') as file:
-        data = pickle.load(file)
-        GlobalVariables.__dict__.update(data)        
-
+def load_global_variables(filename="global_tensors_MI300.pt"):
+    GlobalVariables.tensor_dict = torch.load(filename)
         
 def hidden_state_checks():
     
         print("Analysis of collected hidden states (input to the first layer)")
 
-        for id in GlobalVariables.hidden_states:
-            available_lengths=[l for l in GlobalVariables.hidden_states[id]]
+        for id in GlobalVariables.tensor_dict["hidden_states"]:
+            available_lengths=[l for l in GlobalVariables.tensor_dict["hidden_states"][id]]
             print(f"Cache type {id} {available_lengths=}")
 
         # check that for option no_cache, the hidden state tensor just extends
         # the tensor from previous round with one column, the elements staying the same otherwise
 
         id="no_cache"
-        for len in GlobalVariables.hidden_states[id]:
-            t=GlobalVariables.hidden_states[id][len]
+        for len in GlobalVariables.tensor_dict["hidden_states"][id]:
+            t=GlobalVariables.tensor_dict["hidden_states"][id][len][0]
             print(f"{len=} hidden state tensor shape: {t.shape}")  
             # print(t) 
-            if len-1 in GlobalVariables.hidden_states[id]:
+            if len-1 in GlobalVariables.tensor_dict["hidden_states"][id]:
                 slice=t[:,:-1,:]
                 print(f"{slice.shape=}")
-                result="EQUAL" if torch.all(torch.eq(slice,GlobalVariables.hidden_states[id][len-1])) else "NOT EQUAL"
+                result="EQUAL" if torch.all(torch.eq(slice,GlobalVariables.tensor_dict["hidden_states"][id][len-1][0])) else "NOT EQUAL"
                 print(f"Existing columns of round {len} hidden states {result} to round {len-1} hidden states")
 
-            dyn=GlobalVariables.hidden_states["dynamic"][len]
+            dyn=GlobalVariables.tensor_dict["hidden_states"]["dynamic"][len][0]
 
             result="NOT COMPATIBLE"
 
@@ -44,14 +41,14 @@ def hidden_state_checks():
             print(f"Initial hidden states {result} between dynamic caching and no caching on round {len}")    
 
         # print out the shapes of all the recorded internal hidden state tensors
-        for id in GlobalVariables.input_hidden_states:
-            for len in GlobalVariables.input_hidden_states[id]:
-                for layer in GlobalVariables.input_hidden_states[id][len]:
-                    t=GlobalVariables.input_hidden_states[id][len][layer]
+        for id in GlobalVariables.tensor_dict["hidden_states"]:
+            for len in GlobalVariables.tensor_dict["hidden_states"][id]:
+                for layer in GlobalVariables.tensor_dict["hidden_states"][id][len]:
+                    t=GlobalVariables.tensor_dict["hidden_states"][id][len][layer]
                     print(f"{id=} {len=} {layer=} input hidden state tensor shape:{t.shape} ")
 
-        for round in GlobalVariables.input_hidden_states["dynamic"]:
-            for layer in GlobalVariables.input_hidden_states["dynamic"][round]:
+        for round in GlobalVariables.tensor_dict["hidden_states"]["dynamic"]:
+            for layer in GlobalVariables.tensor_dict["hidden_states"]["dynamic"][round]:
                 compare_hidden_states(round=round, layer=layer)
                 
 
@@ -173,8 +170,8 @@ def compare_hidden_states(*,round:int, layer:int):
         prefill=True
         prefill_indicator="PREFILL "
 
-    t_dyn=GlobalVariables.input_hidden_states["dynamic"][round][layer]
-    t_ref=GlobalVariables.input_hidden_states["no_cache"][round][layer]
+    t_dyn=GlobalVariables.tensor_dict["hidden_states"]["dynamic"][round][layer]
+    t_ref=GlobalVariables.tensor_dict["hidden_states"]["no_cache"][round][layer]
     
     if prefill:
         s=t_ref
@@ -194,4 +191,4 @@ if __name__ == "__main__":
     
     # Step 2: Perform analysis on the class-level variables
     hidden_state_checks()
-    key_value_checks()      
+    # key_value_checks()      
