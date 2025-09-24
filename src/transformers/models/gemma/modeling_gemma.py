@@ -255,35 +255,21 @@ class GemmaAttention(nn.Module):
 
         # print(f'Storing pre-cache key tensor shape {key_states.shape=}')
 
-        if GlobalVariables.key_states_precache is None:
-            GlobalVariables.key_states_precache = {}
+        if GlobalVariables.tensor_dict is None:
+            GlobalVariables.tensor_dict = {}
 
-        if GlobalVariables.key_states_postcache is None:
-            GlobalVariables.key_states_postcache = {}
+        GlobalVariables.tensor_dict.setdefault("key_states_precache", {})
+        GlobalVariables.tensor_dict.setdefault("key_states_postcache", {})
+        GlobalVariables.tensor_dict.setdefault("value_states_precache", {})
+        GlobalVariables.tensor_dict.setdefault("value_states_postcache", {})
     
-        if GlobalVariables.value_states_precache is None:
-            GlobalVariables.value_states_precache = {}
-
-        if GlobalVariables.value_states_postcache is None:
-            GlobalVariables.value_states_postcache = {}
-    
-
         if GlobalVariables.cur_len <= GlobalVariables.output_length_cutoff:
-              if GlobalVariables.cache_id not in GlobalVariables.key_states_precache:
-                GlobalVariables.key_states_precache[GlobalVariables.cache_id] = {}
-              
-              if GlobalVariables.cur_len not in GlobalVariables.key_states_precache[GlobalVariables.cache_id]:
-                GlobalVariables.key_states_precache[GlobalVariables.cache_id][GlobalVariables.cur_len]={}
 
-              GlobalVariables.key_states_precache[GlobalVariables.cache_id][GlobalVariables.cur_len][self.layer_idx] = key_states.clone()
+            GlobalVariables.tensor_dict["key_states_precache"].setdefault(GlobalVariables.cache_id,{})       
+            GlobalVariables.tensor_dict["key_states_precache"][GlobalVariables.cache_id].setdefault(GlobalVariables.cur_len,{})
+            GlobalVariables.tensor_dict["key_states_precache"][GlobalVariables.cache_id][GlobalVariables.cur_len][self.layer_idx] = key_states.clone()
 
-              if GlobalVariables.cache_id not in GlobalVariables.value_states_precache:
-                GlobalVariables.value_states_precache[GlobalVariables.cache_id] = {}
-              
-              if GlobalVariables.cur_len not in GlobalVariables.value_states_precache[GlobalVariables.cache_id]:
-                GlobalVariables.value_states_precache[GlobalVariables.cache_id][GlobalVariables.cur_len]={}
-
-              GlobalVariables.value_states_precache[GlobalVariables.cache_id][GlobalVariables.cur_len][self.layer_idx] = value_states.clone()  
+              print(f"Attention calculations {GlobalVariables.cache_id=} {GlobalVariables.cur_len=} {self.layer_idx=} {input_shape=}" )
 
         if past_key_value is not None:
             # sin and cos are specific to RoPE models; cache_position needed for the static cache
@@ -330,8 +316,15 @@ class GemmaAttention(nn.Module):
             **kwargs,
         )
 
+    #    if GlobalVariables.cur_len <= GlobalVariables.output_length_cutoff:
+    #        print(f"attention output before reshaping: {attn_output.shape=}")
         attn_output = attn_output.reshape(*input_shape, -1).contiguous()
+    #    if GlobalVariables.cur_len <= GlobalVariables.output_length_cutoff:
+    #        print(f"attention output after reshaping: {attn_output.shape=}")
         attn_output = self.o_proj(attn_output)
+    #    if GlobalVariables.cur_len <= GlobalVariables.output_length_cutoff:
+    #       print(f"attention output after o_proj: {attn_output.shape=}")
+        
         return attn_output, attn_weights
 
 
@@ -631,7 +624,7 @@ class GemmaModel(GemmaPreTrainedModel):
         layer_idx=0
         for decoder_layer in self.layers[: self.config.num_hidden_layers]:
             
-            print(f"{layer_idx=} {decoder_layer}")  
+            # print(f"{layer_idx=} {decoder_layer}")  
 
 
             if output_hidden_states:
