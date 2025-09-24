@@ -56,8 +56,8 @@ def key_value_checks():
      # inspect pre-cache keys
 
     layer_idx=0
-    for id in GlobalVariables.key_states_precache:
-        d=GlobalVariables.key_states_precache[id]
+    for id in GlobalVariables.tensor_dict["key_states_precache"]:
+        d=GlobalVariables.tensor_dict["key_states_precache"][id]
         rounds = [r for r in d]
         print(f"Pre-cache keys available for rounds {rounds} for cache type {id}")
         for round in rounds:
@@ -67,8 +67,8 @@ def key_value_checks():
     # inspect post-cache keys
 
     layer_idx=0
-    for id in GlobalVariables.key_states_postcache:
-        d=GlobalVariables.key_states_postcache[id]
+    for id in GlobalVariables.tensor_dict["key_states_postcache"]:
+        d=GlobalVariables.tensor_dict["key_states_postcache"][id]
         rounds = [r for r in d]
         print(f"Post-cache keys available for rounds {rounds} for cache type {id}")
         for round in rounds:
@@ -77,7 +77,7 @@ def key_value_checks():
     # inspect the stored keys and values for
     # - prefill round (4)
 
-    for layer in GlobalVariables.key_states_postcache["dynamic"][5]:
+    for layer in GlobalVariables.tensor_dict["key_states_postcache"]["dynamic"][5]:
         compare_kv_states(round=4, layer=layer, tensor_id="key")
         compare_kv_states(round=4, layer=layer, tensor_id="value")
 
@@ -85,7 +85,7 @@ def key_value_checks():
     # inspect the stored keys and values for
     # - first round after prefill (5)
 
-    for layer in GlobalVariables.key_states_postcache["dynamic"][5]:
+    for layer in GlobalVariables.tensor_dict["key_states_postcache"]["dynamic"][5]:
         compare_kv_states(round=5, layer=layer, tensor_id="key")
         compare_kv_states(round=5, layer=layer, tensor_id="value")
 
@@ -107,11 +107,11 @@ def compare_kv_states(*,round:int, layer:int, tensor_id:str):
 
 
     if tensor_id=="key":
-        t_pre=GlobalVariables.key_states_precache[id][round][layer]
-        t_post=GlobalVariables.key_states_postcache[id][round][layer]
+        t_pre=GlobalVariables.tensor_dict["key_states_precache"][id][round][layer]
+        t_post=GlobalVariables.tensor_dict["key_states_postcache"][id][round][layer]
     else:
-        t_pre=GlobalVariables.value_states_precache[id][round][layer]
-        t_post=GlobalVariables.value_states_postcache[id][round][layer]
+        t_pre=GlobalVariables.tensor_dict["value_states_precache"][id][round][layer]
+        t_post=GlobalVariables.tensor_dict["value_states_postcache"][id][round][layer]
     if prefill:
         s=t_post
     else:        
@@ -130,11 +130,11 @@ def compare_kv_states(*,round:int, layer:int, tensor_id:str):
     # the no cache keys
 
     if tensor_id=="key":
-        t_post_dynamic=GlobalVariables.key_states_postcache["dynamic"][round][layer]
-        t_post_nocache=GlobalVariables.key_states_postcache["no_cache"][round][layer]
+        t_post_dynamic=GlobalVariables.tensor_dict["key_states_postcache"]["dynamic"][round][layer]
+        t_post_nocache=GlobalVariables.tensor_dict["key_states_postcache"]["no_cache"][round][layer]
     else:
-        t_post_dynamic=GlobalVariables.value_states_postcache["dynamic"][round][layer]
-        t_post_nocache=GlobalVariables.value_states_postcache["no_cache"][round][layer]
+        t_post_dynamic=GlobalVariables.tensor_dict["value_states_postcache"]["dynamic"][round][layer]
+        t_post_nocache=GlobalVariables.tensor_dict["value_states_postcache"]["no_cache"][round][layer]
 
     if torch.all(torch.eq(t_post_dynamic,t_post_nocache)):
         result="EQUAL"
@@ -148,11 +148,11 @@ def compare_kv_states(*,round:int, layer:int, tensor_id:str):
         # check if the values fetched on one round match the tensor in cache on the previous round
 
         if tensor_id=="key":
-            t_prev=GlobalVariables.key_states_postcache[id][round-1][layer]
-            t_current=GlobalVariables.key_states_postcache[id][round][layer]
+            t_prev=GlobalVariables.tensor_dict["key_states_postcache"][id][round-1][layer]
+            t_current=GlobalVariables.tensor_dict["key_states_postcache"][id][round][layer]
         else:
-            t_prev=GlobalVariables.value_states_postcache[id][round-1][layer]
-            t_current=GlobalVariables.value_states_postcache[id][round][layer]       
+            t_prev=GlobalVariables.tensor_dict["value_states_postcache"][id][round-1][layer]
+            t_current=GlobalVariables.tensor_dict["value_states_postcache"][id][round][layer]       
 
         s=t_current[:,:,:-1,:]
         if torch.all(torch.eq(t_prev,s)):
@@ -191,4 +191,4 @@ if __name__ == "__main__":
     
     # Step 2: Perform analysis on the class-level variables
     hidden_state_checks()
-    # key_value_checks()      
+    key_value_checks()      
