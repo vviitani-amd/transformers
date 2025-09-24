@@ -7,10 +7,8 @@ from transformers.testing_utils import (
 from globals import GlobalVariables
 import pickle
 
-def save_global_variables(filename="global_variables_MI300.pkl"):
-    with open(filename, 'wb') as file:
-        # Pickle only the class attributes you want to save
-        pickle.dump(GlobalVariables.__dict__, file)
+def save_global_variables(filename="global_tensors_MI300.pt"):
+    torch.save(GlobalVariables.tensor_dict,filename)
 
 
 def test_model_7b_fp16_modified():
