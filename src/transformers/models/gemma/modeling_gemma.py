@@ -350,6 +350,19 @@ class GemmaDecoderLayer(GradientCheckpointingLayer):
         residual = hidden_states
         hidden_states = self.input_layernorm(hidden_states)
 
+        if GlobalVariables.tensor_dict is None:
+            GlobalVariables.tensor_dict = {}
+
+        GlobalVariables.tensor_dict.setdefault("input_layernorm", {})
+        GlobalVariables.tensor_dict.setdefault("self_attention", {})
+        GlobalVariables.tensor_dict.setdefault("post_attention_layernorm", {})
+        
+        if GlobalVariables.cur_len <= GlobalVariables.output_length_cutoff:
+            GlobalVariables.tensor_dict["input_layernorm"].setdefault(GlobalVariables.cache_id,{})       
+            GlobalVariables.tensor_dict["input_layernorm"][GlobalVariables.cache_id].setdefault(GlobalVariables.cur_len,{})
+            GlobalVariables.tensor_dict["input_layernorm"][GlobalVariables.cache_id][GlobalVariables.cur_len][GlobalVariables.layer_idx] = hidden_states.clone()
+
+
         # Self Attention
         hidden_states, self_attn_weights = self.self_attn(
             hidden_states=hidden_states,
@@ -362,11 +375,21 @@ class GemmaDecoderLayer(GradientCheckpointingLayer):
             position_embeddings=position_embeddings,
             **kwargs,
         )
-        hidden_states = residual + hidden_states
+        if GlobalVariables.cur_len <= GlobalVariables.output_length_cutoff:
+            GlobalVariables.tensor_dict["self_attention"].setdefault(GlobalVariables.cache_id,{})       
+            GlobalVariables.tensor_dict["self_attention"][GlobalVariables.cache_id].setdefault(GlobalVariables.cur_len,{})
+            GlobalVariables.tensor_dict["self_attention"][GlobalVariables.cache_id][GlobalVariables.cur_len][GlobalVariables.layer_idx] = hidden_states.clone()
 
+        hidden_states = residual + hidden_states
+        
         # Fully Connected
         residual = hidden_states
         hidden_states = self.post_attention_layernorm(hidden_states)
+        if GlobalVariables.cur_len <= GlobalVariables.output_length_cutoff:
+            GlobalVariables.tensor_dict["post_attention_layernorm"].setdefault(GlobalVariables.cache_id,{})       
+            GlobalVariables.tensor_dict["post_attention_layernorm"][GlobalVariables.cache_id].setdefault(GlobalVariables.cur_len,{})
+            GlobalVariables.tensor_dict["post_attention_layernorm"][GlobalVariables.cache_id][GlobalVariables.cur_len][GlobalVariables.layer_idx] = hidden_states.clone()
+
         hidden_states = self.mlp(hidden_states)
         hidden_states = residual + hidden_states
 
@@ -608,7 +631,7 @@ class GemmaModel(GemmaPreTrainedModel):
         layer_idx=0
         for decoder_layer in self.layers[: self.config.num_hidden_layers]:
             
-            
+            GlobalVariables.layer_idx=layer_idx
 
             if output_hidden_states:
                 all_hidden_states += (hidden_states,)

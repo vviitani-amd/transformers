@@ -291,4 +291,7 @@ if __name__ == "__main__":
     # Step 2: Perform analysis on the class-level variables
     hidden_state_checks()
     key_value_checks()   
+    # compare the hidden state between dynamic caching and no cache  when the divergence first appears
+    # that is, output_length=5, output of layer #6 = input to layer #7
+    
     characterize_tensor_differences(GlobalVariables.tensor_dict["hidden_states"]["dynamic"][5][7], GlobalVariables.tensor_dict["hidden_states"]["no_cache"][5][7][:,-1:,:])   

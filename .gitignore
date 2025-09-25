@@ -170,3 +170,4 @@ tags
 generated_scores*
 .gitignore
 out
+global_tensors_*.pt
