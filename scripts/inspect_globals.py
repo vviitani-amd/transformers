@@ -313,6 +313,7 @@ def check_decoder_internals():
 
     compare_decoder_result("input_layernorm")
     compare_decoder_result("self_attention")
+    compare_decoder_result("attention_and_input") 
     compare_decoder_result("post_attention_layernorm")
 
 if __name__ == "__main__":
