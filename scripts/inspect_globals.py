@@ -282,7 +282,38 @@ def characterize_tensor_differences(t1: torch.Tensor, t2: torch.Tensor):
     # Print statistics for machine epsilon differences
     print_statistics(diff_machine_epsilons, "Machine Epsilon Difference")
 
+def compare_decoder_result(result_id:str):
 
+    print(f"Comparing decoder stage {result_id}")
+    for round in GlobalVariables.tensor_dict[result_id]["dynamic"]:
+        for layer in GlobalVariables.tensor_dict[result_id]["dynamic"][round]:
+            prefill=False
+            prefill_indicator=""
+            if round==4:
+                prefill=True
+                prefill_indicator="PREFILL "
+
+            t_dyn=GlobalVariables.tensor_dict[result_id]["dynamic"][round][layer]
+            t_ref=GlobalVariables.tensor_dict[result_id]["no_cache"][round][layer]
+            
+            if prefill:
+                s=t_ref
+            else:        
+                s=t_ref[:,-1:,:]
+
+            if torch.all(torch.eq(t_dyn,s)):
+                result="EQUAL"
+            else:
+                result="NOT EQUAL"            
+
+            print(f"{prefill_indicator}{round=} {layer=}: decoder intermediate result {result_id} (dynamic caching) {result} to corresponding column in intermediate result tensor without cache")
+
+
+def check_decoder_internals():
+
+    compare_decoder_result("input_layernorm")
+    compare_decoder_result("self_attention")
+    compare_decoder_result("post_attention_layernorm")
 
 if __name__ == "__main__":
     # Step 1: Unpickle the class-level variables of GlobalVariables from a disk file
@@ -293,5 +324,7 @@ if __name__ == "__main__":
     key_value_checks()   
     # compare the hidden state between dynamic caching and no cache  when the divergence first appears
     # that is, output_length=5, output of layer #6 = input to layer #7
-    
+
     characterize_tensor_differences(GlobalVariables.tensor_dict["hidden_states"]["dynamic"][5][7], GlobalVariables.tensor_dict["hidden_states"]["no_cache"][5][7][:,-1:,:])   
+
+    check_decoder_internals()
