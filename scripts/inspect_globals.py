@@ -1,6 +1,6 @@
 import torch
+import numpy as np
 from globals import GlobalVariables
-import pickle
 
 def load_global_variables(filename="global_tensors_MI300.pt"):
     GlobalVariables.tensor_dict = torch.load(filename)
@@ -185,10 +185,87 @@ def compare_hidden_states(*,round:int, layer:int):
 
     print(f"{prefill_indicator}{round=} {layer=}: input hidden state (dynamic caching) {result} to corresponding column in hidden state tensor without cache")
     
+import torch
+import numpy as np
+
+def print_statistics(vector: np.ndarray, description: str):
+    """
+    Prints out statistics for a given input vector.
+
+    Parameters:
+    vector (np.ndarray): The input vector for which to calculate and print statistics.
+    description (str): A description of the vector to label the printout.
+    """
+    print(f"{description} Statistics:")
+    print(f"Mean: {np.mean(vector):.6f}")
+    print(f"Standard Deviation: {np.std(vector):.6f}")
+    print(f"Minimum: {np.min(vector):.6f}")
+    print(f"Maximum: {np.max(vector):.6f}")
+    print()
+
+def characterize_tensor_differences(t1: torch.Tensor, t2: torch.Tensor):
+    """
+    Prints and collects non-zero differences between two torch tensors into a two-dimensional numpy array.
+    Each row contains the element value from t1, the element value from t2, the absolute difference,
+    and the difference in machine epsilons. The rows are sorted by the largest absolute difference.
+
+    Parameters:
+    t1 (torch.Tensor): The first input tensor.
+    t2 (torch.Tensor): The second input tensor.
+    """
+    # Ensure tensors are on the CPU
+    t1 = t1.cpu()
+    t2 = t2.cpu()
+
+    # Check if the shapes of the tensors are the same
+    if t1.shape != t2.shape:
+        print(f"Shape mismatch: t1 shape {t1.shape} vs t2 shape {t2.shape}")
+        return  # Exit if shape mismatch
+
+    # Element-wise differences and their absolute values
+    difference = t1 - t2
+    absolute_difference = torch.abs(difference)
+    
+    # Mask to identify non-zero differences
+    nonzero_mask = absolute_difference.nonzero(as_tuple=True)
+
+    # Extract values from t1, t2, and absolute differences
+    values_t1 = t1[nonzero_mask].numpy()
+    values_t2 = t2[nonzero_mask].numpy()
+    abs_diff_values = absolute_difference[nonzero_mask].numpy()
+
+    # Calculate epsilon using np.nextafter directly
+    epsilon_t1 = np.nextafter(values_t1, np.inf, dtype=np.float16) - values_t1
+    epsilon_t2 = np.nextafter(values_t2, np.inf, dtype=np.float16) - values_t2
+
+    # Calculate the difference in machine epsilons
+    diff_machine_epsilons = abs_diff_values / np.minimum(epsilon_t1, epsilon_t2)
+
+    # Combine values into a numpy array
+    differences_array = np.vstack((values_t1, values_t2, abs_diff_values, diff_machine_epsilons)).T
+
+    # Sort the array by absolute differences, largest first
+    sorted_indices = np.argsort(differences_array[:, 2])[::-1]
+    sorted_differences_array = differences_array[sorted_indices]
+
+    # Characterize non-zero differences
+    print(f"Number of non-zero differences: {sorted_differences_array.shape[0]}")
+    print("Array of non-zero differences sorted by largest absolute difference:")
+    print(sorted_differences_array)
+
+    # Print statistics for absolute differences
+    print_statistics(abs_diff_values, "Absolute Difference")
+
+    # Print statistics for machine epsilon differences
+    print_statistics(diff_machine_epsilons, "Machine Epsilon Difference")
+
+
+
 if __name__ == "__main__":
     # Step 1: Unpickle the class-level variables of GlobalVariables from a disk file
     load_global_variables()
     
     # Step 2: Perform analysis on the class-level variables
     hidden_state_checks()
-    key_value_checks()      
+    key_value_checks()   
+    characterize_tensor_differences(GlobalVariables.tensor_dict["hidden_states"]["dynamic"][5][7], GlobalVariables.tensor_dict["hidden_states"]["no_cache"][5][7][:,-1:,:])   
