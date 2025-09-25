@@ -355,6 +355,8 @@ class GemmaDecoderLayer(GradientCheckpointingLayer):
 
         GlobalVariables.tensor_dict.setdefault("input_layernorm", {})
         GlobalVariables.tensor_dict.setdefault("self_attention", {})
+        GlobalVariables.tensor_dict.setdefault("attention_and_input", {})
+
         GlobalVariables.tensor_dict.setdefault("post_attention_layernorm", {})
         
         if GlobalVariables.cur_len <= GlobalVariables.output_length_cutoff:
@@ -381,7 +383,12 @@ class GemmaDecoderLayer(GradientCheckpointingLayer):
             GlobalVariables.tensor_dict["self_attention"][GlobalVariables.cache_id][GlobalVariables.cur_len][GlobalVariables.layer_idx] = hidden_states.clone()
 
         hidden_states = residual + hidden_states
-        
+        if GlobalVariables.cur_len <= GlobalVariables.output_length_cutoff:
+            GlobalVariables.tensor_dict["attention_and_input"].setdefault(GlobalVariables.cache_id,{})       
+            GlobalVariables.tensor_dict["attention_and_input"][GlobalVariables.cache_id].setdefault(GlobalVariables.cur_len,{})
+            GlobalVariables.tensor_dict["attention_and_input"][GlobalVariables.cache_id][GlobalVariables.cur_len][GlobalVariables.layer_idx] = hidden_states.clone()
+
+
         # Fully Connected
         residual = hidden_states
         hidden_states = self.post_attention_layernorm(hidden_states)
