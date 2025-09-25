@@ -185,22 +185,37 @@ def compare_hidden_states(*,round:int, layer:int):
 
     print(f"{prefill_indicator}{round=} {layer=}: input hidden state (dynamic caching) {result} to corresponding column in hidden state tensor without cache")
     
-import torch
-import numpy as np
 
 def print_statistics(vector: np.ndarray, description: str):
     """
-    Prints out statistics for a given input vector.
+    Prints out statistics for a given input vector, including median, specified percentiles, 
+    the count of elements that are at most as large as the median, and the percentage of such elements.
 
     Parameters:
     vector (np.ndarray): The input vector for which to calculate and print statistics.
     description (str): A description of the vector to label the printout.
     """
     print(f"{description} Statistics:")
-    print(f"Mean: {np.mean(vector):.6f}")
-    print(f"Standard Deviation: {np.std(vector):.6f}")
-    print(f"Minimum: {np.min(vector):.6f}")
-    print(f"Maximum: {np.max(vector):.6f}")
+    print(f"Mean: {np.mean(vector)}")
+    print(f"Minimum: {np.min(vector)}")
+    print(f"Maximum: {np.max(vector)}")
+    
+    # Median value
+    median_value = np.median(vector)
+    print(f"Median: {median_value}")
+    
+    # Count of elements at most as large as the median
+    count_median_or_less = np.sum(vector <= median_value)
+    total_elements = len(vector)
+    percentage_median_or_less = (count_median_or_less / total_elements) * 100
+    print(f"Count of elements <= median: {count_median_or_less}")
+    print(f"Percentage of elements <= median: {percentage_median_or_less:.2f}%")
+    
+    # Calculate percentiles at 10% intervals from 10 to 90
+    percentiles = np.arange(10, 100, 10)
+    percentile_values = np.percentile(vector, percentiles)
+    for perc, value in zip(percentiles, percentile_values):
+        print(f"{perc}th Percentile: {value}")
     print()
 
 def characterize_tensor_differences(t1: torch.Tensor, t2: torch.Tensor):
@@ -217,10 +232,17 @@ def characterize_tensor_differences(t1: torch.Tensor, t2: torch.Tensor):
     t1 = t1.cpu()
     t2 = t2.cpu()
 
+    # Print tensor shapes
+    print(f"Shape of t1: {t1.shape}")
+    print(f"Shape of t2: {t2.shape}")
+
     # Check if the shapes of the tensors are the same
     if t1.shape != t2.shape:
         print(f"Shape mismatch: t1 shape {t1.shape} vs t2 shape {t2.shape}")
         return  # Exit if shape mismatch
+
+    # Total number of elements
+    total_elements = t1.numel()
 
     # Element-wise differences and their absolute values
     difference = t1 - t2
@@ -228,6 +250,7 @@ def characterize_tensor_differences(t1: torch.Tensor, t2: torch.Tensor):
     
     # Mask to identify non-zero differences
     nonzero_mask = absolute_difference.nonzero(as_tuple=True)
+    nonzero_count = len(nonzero_mask[0])
 
     # Extract values from t1, t2, and absolute differences
     values_t1 = t1[nonzero_mask].numpy()
@@ -249,7 +272,7 @@ def characterize_tensor_differences(t1: torch.Tensor, t2: torch.Tensor):
     sorted_differences_array = differences_array[sorted_indices]
 
     # Characterize non-zero differences
-    print(f"Number of non-zero differences: {sorted_differences_array.shape[0]}")
+    print(f"Number of non-zero differences: {nonzero_count} out of total {total_elements} elements")
     print("Array of non-zero differences sorted by largest absolute difference:")
     print(sorted_differences_array)
 
