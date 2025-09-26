@@ -329,3 +329,6 @@ if __name__ == "__main__":
     characterize_tensor_differences(GlobalVariables.tensor_dict["hidden_states"]["dynamic"][5][7], GlobalVariables.tensor_dict["hidden_states"]["no_cache"][5][7][:,-1:,:])   
 
     check_decoder_internals()
+
+    print("Numeric differences in post_ettention_layernorm (when divergence first occurs)")
+    characterize_tensor_differences(GlobalVariables.tensor_dict["post_attention_layernorm"]["dynamic"][5][6], GlobalVariables.tensor_dict["post_attention_layernorm"]["no_cache"][5][6][:,-1:,:])   
