@@ -151,7 +151,46 @@ class GemmaMLP(nn.Module):
         self.act_fn = ACT2FN[config.hidden_act]
 
     def forward(self, x):
-        down_proj = self.down_proj(self.act_fn(self.gate_proj(x)) * self.up_proj(x))
+        gate=self.gate_proj(x)
+        act=self.act_fn(gate)
+        up= self.up_proj(x)
+        mul=act*up
+        down_proj = self.down_proj(mul)
+
+        GlobalVariables.tensor_dict.setdefault("mlp_gate", {})
+     
+        if GlobalVariables.cur_len <= GlobalVariables.output_length_cutoff:
+            GlobalVariables.tensor_dict["mlp_gate"].setdefault(GlobalVariables.cache_id,{})       
+            GlobalVariables.tensor_dict["mlp_gate"][GlobalVariables.cache_id].setdefault(GlobalVariables.cur_len,{})
+            GlobalVariables.tensor_dict["mlp_gate"][GlobalVariables.cache_id][GlobalVariables.cur_len][GlobalVariables.layer_idx] = gate.clone()
+
+        GlobalVariables.tensor_dict.setdefault("mlp_act", {})
+     
+        if GlobalVariables.cur_len <= GlobalVariables.output_length_cutoff:
+            GlobalVariables.tensor_dict["mlp_act"].setdefault(GlobalVariables.cache_id,{})       
+            GlobalVariables.tensor_dict["mlp_act"][GlobalVariables.cache_id].setdefault(GlobalVariables.cur_len,{})
+            GlobalVariables.tensor_dict["mlp_act"][GlobalVariables.cache_id][GlobalVariables.cur_len][GlobalVariables.layer_idx] = act.clone()
+        GlobalVariables.tensor_dict.setdefault("mlp_up", {})
+     
+        if GlobalVariables.cur_len <= GlobalVariables.output_length_cutoff:
+            GlobalVariables.tensor_dict["mlp_up"].setdefault(GlobalVariables.cache_id,{})       
+            GlobalVariables.tensor_dict["mlp_up"][GlobalVariables.cache_id].setdefault(GlobalVariables.cur_len,{})
+            GlobalVariables.tensor_dict["mlp_up"][GlobalVariables.cache_id][GlobalVariables.cur_len][GlobalVariables.layer_idx] = up.clone()
+        GlobalVariables.tensor_dict.setdefault("mlp_mul", {})
+     
+        if GlobalVariables.cur_len <= GlobalVariables.output_length_cutoff:
+            GlobalVariables.tensor_dict["mlp_mul"].setdefault(GlobalVariables.cache_id,{})       
+            GlobalVariables.tensor_dict["mlp_mul"][GlobalVariables.cache_id].setdefault(GlobalVariables.cur_len,{})
+            GlobalVariables.tensor_dict["mlp_mul"][GlobalVariables.cache_id][GlobalVariables.cur_len][GlobalVariables.layer_idx] = mul.clone()
+        GlobalVariables.tensor_dict.setdefault("mlp_down", {})
+     
+        if GlobalVariables.cur_len <= GlobalVariables.output_length_cutoff:
+            GlobalVariables.tensor_dict["mlp_down"].setdefault(GlobalVariables.cache_id,{})       
+            GlobalVariables.tensor_dict["mlp_down"][GlobalVariables.cache_id].setdefault(GlobalVariables.cur_len,{})
+            GlobalVariables.tensor_dict["mlp_down"][GlobalVariables.cache_id][GlobalVariables.cur_len][GlobalVariables.layer_idx] = down_proj.clone()
+
+
+
         return down_proj
 
 
@@ -451,6 +490,15 @@ class GemmaDecoderLayer(GradientCheckpointingLayer):
             GlobalVariables.tensor_dict["post_attention_layernorm"][GlobalVariables.cache_id][GlobalVariables.cur_len][GlobalVariables.layer_idx] = hidden_states.clone()
 
         hidden_states = self.mlp(hidden_states)
+
+        GlobalVariables.tensor_dict.setdefault("decoder_mlp", {})
+        
+        if GlobalVariables.cur_len <= GlobalVariables.output_length_cutoff:
+            GlobalVariables.tensor_dict["decoder_mlp"].setdefault(GlobalVariables.cache_id,{})       
+            GlobalVariables.tensor_dict["decoder_mlp"][GlobalVariables.cache_id].setdefault(GlobalVariables.cur_len,{})
+            GlobalVariables.tensor_dict["decoder_mlp"][GlobalVariables.cache_id][GlobalVariables.cur_len][GlobalVariables.layer_idx] = hidden_states.clone()
+
+
         hidden_states = residual + hidden_states
 
         outputs = (hidden_states,)
