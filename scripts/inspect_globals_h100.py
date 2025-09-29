@@ -321,7 +321,11 @@ def check_decoder_internals():
     #compare_decoder_result("rsqrt_input")
     #compare_decoder_result("rsqrt_output")
     #compare_decoder_result("norm_raw_output")
-
+    compare_decoder_result("mlp_gate")
+    compare_decoder_result("mlp_act")
+    compare_decoder_result("mlp_up")
+    compare_decoder_result("mlp_mul")
+    compare_decoder_result("mlp_down")
 
 if __name__ == "__main__":
     # Step 1: Unpickle the class-level variables of GlobalVariables from a disk file
