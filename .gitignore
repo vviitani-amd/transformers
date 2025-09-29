@@ -171,3 +171,4 @@ generated_scores*
 .gitignore
 out
 global_tensors_*.pt
+global_tensors_MI300.pt

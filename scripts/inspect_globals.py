@@ -318,6 +318,8 @@ def check_decoder_internals():
     compare_decoder_result("attention_and_input") 
     compare_decoder_result("post_attention_layernorm")
     compare_decoder_result("norm_input")
+    compare_decoder_result("rsqrt_input_pow")
+    compare_decoder_result("rsqrt_input_mean")
     compare_decoder_result("rsqrt_input")
     compare_decoder_result("rsqrt_output")
     compare_decoder_result("norm_raw_output")
@@ -337,5 +339,8 @@ if __name__ == "__main__":
 
     check_decoder_internals()
 
-    print("Numeric differences in post_ettention_layernorm (when divergence first occurs)")
+    print("Numeric differences in post_attention_layernorm (when divergence first occurs)")
     characterize_tensor_differences(GlobalVariables.tensor_dict["post_attention_layernorm"]["dynamic"][5][6], GlobalVariables.tensor_dict["post_attention_layernorm"]["no_cache"][5][6][:,-1:,:])   
+
+    print("Numeric differences in mean calculatiob (within post_attention_layernorm) (when divergence first occurs)")
+    characterize_tensor_differences(GlobalVariables.tensor_dict["rsqrt_input_mean"]["dynamic"][5][6], GlobalVariables.tensor_dict["rsqrt_input_mean"]["no_cache"][5][6][:,-1:,:])   
