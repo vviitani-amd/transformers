@@ -73,10 +73,46 @@ class GemmaRMSNorm(nn.Module):
         self.weight = nn.Parameter(torch.zeros(dim))
 
     def _norm(self, x):
-        return x * torch.rsqrt(x.pow(2).mean(-1, keepdim=True) + self.eps)
+
+        GlobalVariables.tensor_dict.setdefault("norm_input", {})
+     
+        if GlobalVariables.cur_len <= GlobalVariables.output_length_cutoff:
+            GlobalVariables.tensor_dict["norm_input"].setdefault(GlobalVariables.cache_id,{})       
+            GlobalVariables.tensor_dict["norm_input"][GlobalVariables.cache_id].setdefault(GlobalVariables.cur_len,{})
+            GlobalVariables.tensor_dict["norm_input"][GlobalVariables.cache_id][GlobalVariables.cur_len][GlobalVariables.layer_idx] = x.clone()
+
+        GlobalVariables.tensor_dict.setdefault("rsqrt_output", {})
+     
+
+        input=x.pow(2).mean(-1, keepdim=True) + self.eps
+        rsqrt=torch.rsqrt(input)
+
+        GlobalVariables.tensor_dict.setdefault("rsqrt_input", {})
+     
+        if GlobalVariables.cur_len <= GlobalVariables.output_length_cutoff:
+            GlobalVariables.tensor_dict["rsqrt_input"].setdefault(GlobalVariables.cache_id,{})       
+            GlobalVariables.tensor_dict["rsqrt_input"][GlobalVariables.cache_id].setdefault(GlobalVariables.cur_len,{})
+            GlobalVariables.tensor_dict["rsqrt_input"][GlobalVariables.cache_id][GlobalVariables.cur_len][GlobalVariables.layer_idx] = input.clone()
+
+        GlobalVariables.tensor_dict.setdefault("rsqrt_output", {})
+     
+        if GlobalVariables.cur_len <= GlobalVariables.output_length_cutoff:
+            GlobalVariables.tensor_dict["rsqrt_output"].setdefault(GlobalVariables.cache_id,{})       
+            GlobalVariables.tensor_dict["rsqrt_output"][GlobalVariables.cache_id].setdefault(GlobalVariables.cur_len,{})
+            GlobalVariables.tensor_dict["rsqrt_output"][GlobalVariables.cache_id][GlobalVariables.cur_len][GlobalVariables.layer_idx] = rsqrt.clone()
+
+
+        return x * rsqrt
 
     def forward(self, x):
         output = self._norm(x.float())
+        GlobalVariables.tensor_dict.setdefault("norm_raw_output", {})
+     
+        if GlobalVariables.cur_len <= GlobalVariables.output_length_cutoff:
+            GlobalVariables.tensor_dict["norm_raw_output"].setdefault(GlobalVariables.cache_id,{})       
+            GlobalVariables.tensor_dict["norm_raw_output"][GlobalVariables.cache_id].setdefault(GlobalVariables.cur_len,{})
+            GlobalVariables.tensor_dict["norm_raw_output"][GlobalVariables.cache_id][GlobalVariables.cur_len][GlobalVariables.layer_idx] = output.clone()
+
         # Llama does x.to(float16) * w whilst Gemma is (x * w).to(float16)
         # See https://github.com/huggingface/transformers/pull/29402
         output = output * (1.0 + self.weight.float())

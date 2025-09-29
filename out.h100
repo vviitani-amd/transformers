@@ -1,0 +1,1265 @@
+Analysis of collected hidden states (input to the first layer)
+Cache type dynamic available_lengths=[4, 5]
+Cache type no_cache available_lengths=[4, 5]
+len=4 hidden state tensor shape: torch.Size([1, 4, 3072])
+Initial hidden states COMPATIBLE between dynamic caching and no caching on round 4
+len=5 hidden state tensor shape: torch.Size([1, 5, 3072])
+slice.shape=torch.Size([1, 4, 3072])
+Existing columns of round 5 hidden states EQUAL to round 4 hidden states
+Initial hidden states COMPATIBLE between dynamic caching and no caching on round 5
+id='dynamic' len=4 layer=0 input hidden state tensor shape:torch.Size([1, 4, 3072]) 
+id='dynamic' len=4 layer=1 input hidden state tensor shape:torch.Size([1, 4, 3072]) 
+id='dynamic' len=4 layer=2 input hidden state tensor shape:torch.Size([1, 4, 3072]) 
+id='dynamic' len=4 layer=3 input hidden state tensor shape:torch.Size([1, 4, 3072]) 
+id='dynamic' len=4 layer=4 input hidden state tensor shape:torch.Size([1, 4, 3072]) 
+id='dynamic' len=4 layer=5 input hidden state tensor shape:torch.Size([1, 4, 3072]) 
+id='dynamic' len=4 layer=6 input hidden state tensor shape:torch.Size([1, 4, 3072]) 
+id='dynamic' len=4 layer=7 input hidden state tensor shape:torch.Size([1, 4, 3072]) 
+id='dynamic' len=4 layer=8 input hidden state tensor shape:torch.Size([1, 4, 3072]) 
+id='dynamic' len=4 layer=9 input hidden state tensor shape:torch.Size([1, 4, 3072]) 
+id='dynamic' len=4 layer=10 input hidden state tensor shape:torch.Size([1, 4, 3072]) 
+id='dynamic' len=4 layer=11 input hidden state tensor shape:torch.Size([1, 4, 3072]) 
+id='dynamic' len=4 layer=12 input hidden state tensor shape:torch.Size([1, 4, 3072]) 
+id='dynamic' len=4 layer=13 input hidden state tensor shape:torch.Size([1, 4, 3072]) 
+id='dynamic' len=4 layer=14 input hidden state tensor shape:torch.Size([1, 4, 3072]) 
+id='dynamic' len=4 layer=15 input hidden state tensor shape:torch.Size([1, 4, 3072]) 
+id='dynamic' len=4 layer=16 input hidden state tensor shape:torch.Size([1, 4, 3072]) 
+id='dynamic' len=4 layer=17 input hidden state tensor shape:torch.Size([1, 4, 3072]) 
+id='dynamic' len=4 layer=18 input hidden state tensor shape:torch.Size([1, 4, 3072]) 
+id='dynamic' len=4 layer=19 input hidden state tensor shape:torch.Size([1, 4, 3072]) 
+id='dynamic' len=4 layer=20 input hidden state tensor shape:torch.Size([1, 4, 3072]) 
+id='dynamic' len=4 layer=21 input hidden state tensor shape:torch.Size([1, 4, 3072]) 
+id='dynamic' len=4 layer=22 input hidden state tensor shape:torch.Size([1, 4, 3072]) 
+id='dynamic' len=4 layer=23 input hidden state tensor shape:torch.Size([1, 4, 3072]) 
+id='dynamic' len=4 layer=24 input hidden state tensor shape:torch.Size([1, 4, 3072]) 
+id='dynamic' len=4 layer=25 input hidden state tensor shape:torch.Size([1, 4, 3072]) 
+id='dynamic' len=4 layer=26 input hidden state tensor shape:torch.Size([1, 4, 3072]) 
+id='dynamic' len=4 layer=27 input hidden state tensor shape:torch.Size([1, 4, 3072]) 
+id='dynamic' len=5 layer=0 input hidden state tensor shape:torch.Size([1, 1, 3072]) 
+id='dynamic' len=5 layer=1 input hidden state tensor shape:torch.Size([1, 1, 3072]) 
+id='dynamic' len=5 layer=2 input hidden state tensor shape:torch.Size([1, 1, 3072]) 
+id='dynamic' len=5 layer=3 input hidden state tensor shape:torch.Size([1, 1, 3072]) 
+id='dynamic' len=5 layer=4 input hidden state tensor shape:torch.Size([1, 1, 3072]) 
+id='dynamic' len=5 layer=5 input hidden state tensor shape:torch.Size([1, 1, 3072]) 
+id='dynamic' len=5 layer=6 input hidden state tensor shape:torch.Size([1, 1, 3072]) 
+id='dynamic' len=5 layer=7 input hidden state tensor shape:torch.Size([1, 1, 3072]) 
+id='dynamic' len=5 layer=8 input hidden state tensor shape:torch.Size([1, 1, 3072]) 
+id='dynamic' len=5 layer=9 input hidden state tensor shape:torch.Size([1, 1, 3072]) 
+id='dynamic' len=5 layer=10 input hidden state tensor shape:torch.Size([1, 1, 3072]) 
+id='dynamic' len=5 layer=11 input hidden state tensor shape:torch.Size([1, 1, 3072]) 
+id='dynamic' len=5 layer=12 input hidden state tensor shape:torch.Size([1, 1, 3072]) 
+id='dynamic' len=5 layer=13 input hidden state tensor shape:torch.Size([1, 1, 3072]) 
+id='dynamic' len=5 layer=14 input hidden state tensor shape:torch.Size([1, 1, 3072]) 
+id='dynamic' len=5 layer=15 input hidden state tensor shape:torch.Size([1, 1, 3072]) 
+id='dynamic' len=5 layer=16 input hidden state tensor shape:torch.Size([1, 1, 3072]) 
+id='dynamic' len=5 layer=17 input hidden state tensor shape:torch.Size([1, 1, 3072]) 
+id='dynamic' len=5 layer=18 input hidden state tensor shape:torch.Size([1, 1, 3072]) 
+id='dynamic' len=5 layer=19 input hidden state tensor shape:torch.Size([1, 1, 3072]) 
+id='dynamic' len=5 layer=20 input hidden state tensor shape:torch.Size([1, 1, 3072]) 
+id='dynamic' len=5 layer=21 input hidden state tensor shape:torch.Size([1, 1, 3072]) 
+id='dynamic' len=5 layer=22 input hidden state tensor shape:torch.Size([1, 1, 3072]) 
+id='dynamic' len=5 layer=23 input hidden state tensor shape:torch.Size([1, 1, 3072]) 
+id='dynamic' len=5 layer=24 input hidden state tensor shape:torch.Size([1, 1, 3072]) 
+id='dynamic' len=5 layer=25 input hidden state tensor shape:torch.Size([1, 1, 3072]) 
+id='dynamic' len=5 layer=26 input hidden state tensor shape:torch.Size([1, 1, 3072]) 
+id='dynamic' len=5 layer=27 input hidden state tensor shape:torch.Size([1, 1, 3072]) 
+id='no_cache' len=4 layer=0 input hidden state tensor shape:torch.Size([1, 4, 3072]) 
+id='no_cache' len=4 layer=1 input hidden state tensor shape:torch.Size([1, 4, 3072]) 
+id='no_cache' len=4 layer=2 input hidden state tensor shape:torch.Size([1, 4, 3072]) 
+id='no_cache' len=4 layer=3 input hidden state tensor shape:torch.Size([1, 4, 3072]) 
+id='no_cache' len=4 layer=4 input hidden state tensor shape:torch.Size([1, 4, 3072]) 
+id='no_cache' len=4 layer=5 input hidden state tensor shape:torch.Size([1, 4, 3072]) 
+id='no_cache' len=4 layer=6 input hidden state tensor shape:torch.Size([1, 4, 3072]) 
+id='no_cache' len=4 layer=7 input hidden state tensor shape:torch.Size([1, 4, 3072]) 
+id='no_cache' len=4 layer=8 input hidden state tensor shape:torch.Size([1, 4, 3072]) 
+id='no_cache' len=4 layer=9 input hidden state tensor shape:torch.Size([1, 4, 3072]) 
+id='no_cache' len=4 layer=10 input hidden state tensor shape:torch.Size([1, 4, 3072]) 
+id='no_cache' len=4 layer=11 input hidden state tensor shape:torch.Size([1, 4, 3072]) 
+id='no_cache' len=4 layer=12 input hidden state tensor shape:torch.Size([1, 4, 3072]) 
+id='no_cache' len=4 layer=13 input hidden state tensor shape:torch.Size([1, 4, 3072]) 
+id='no_cache' len=4 layer=14 input hidden state tensor shape:torch.Size([1, 4, 3072]) 
+id='no_cache' len=4 layer=15 input hidden state tensor shape:torch.Size([1, 4, 3072]) 
+id='no_cache' len=4 layer=16 input hidden state tensor shape:torch.Size([1, 4, 3072]) 
+id='no_cache' len=4 layer=17 input hidden state tensor shape:torch.Size([1, 4, 3072]) 
+id='no_cache' len=4 layer=18 input hidden state tensor shape:torch.Size([1, 4, 3072]) 
+id='no_cache' len=4 layer=19 input hidden state tensor shape:torch.Size([1, 4, 3072]) 
+id='no_cache' len=4 layer=20 input hidden state tensor shape:torch.Size([1, 4, 3072]) 
+id='no_cache' len=4 layer=21 input hidden state tensor shape:torch.Size([1, 4, 3072]) 
+id='no_cache' len=4 layer=22 input hidden state tensor shape:torch.Size([1, 4, 3072]) 
+id='no_cache' len=4 layer=23 input hidden state tensor shape:torch.Size([1, 4, 3072]) 
+id='no_cache' len=4 layer=24 input hidden state tensor shape:torch.Size([1, 4, 3072]) 
+id='no_cache' len=4 layer=25 input hidden state tensor shape:torch.Size([1, 4, 3072]) 
+id='no_cache' len=4 layer=26 input hidden state tensor shape:torch.Size([1, 4, 3072]) 
+id='no_cache' len=4 layer=27 input hidden state tensor shape:torch.Size([1, 4, 3072]) 
+id='no_cache' len=5 layer=0 input hidden state tensor shape:torch.Size([1, 5, 3072]) 
+id='no_cache' len=5 layer=1 input hidden state tensor shape:torch.Size([1, 5, 3072]) 
+id='no_cache' len=5 layer=2 input hidden state tensor shape:torch.Size([1, 5, 3072]) 
+id='no_cache' len=5 layer=3 input hidden state tensor shape:torch.Size([1, 5, 3072]) 
+id='no_cache' len=5 layer=4 input hidden state tensor shape:torch.Size([1, 5, 3072]) 
+id='no_cache' len=5 layer=5 input hidden state tensor shape:torch.Size([1, 5, 3072]) 
+id='no_cache' len=5 layer=6 input hidden state tensor shape:torch.Size([1, 5, 3072]) 
+id='no_cache' len=5 layer=7 input hidden state tensor shape:torch.Size([1, 5, 3072]) 
+id='no_cache' len=5 layer=8 input hidden state tensor shape:torch.Size([1, 5, 3072]) 
+id='no_cache' len=5 layer=9 input hidden state tensor shape:torch.Size([1, 5, 3072]) 
+id='no_cache' len=5 layer=10 input hidden state tensor shape:torch.Size([1, 5, 3072]) 
+id='no_cache' len=5 layer=11 input hidden state tensor shape:torch.Size([1, 5, 3072]) 
+id='no_cache' len=5 layer=12 input hidden state tensor shape:torch.Size([1, 5, 3072]) 
+id='no_cache' len=5 layer=13 input hidden state tensor shape:torch.Size([1, 5, 3072]) 
+id='no_cache' len=5 layer=14 input hidden state tensor shape:torch.Size([1, 5, 3072]) 
+id='no_cache' len=5 layer=15 input hidden state tensor shape:torch.Size([1, 5, 3072]) 
+id='no_cache' len=5 layer=16 input hidden state tensor shape:torch.Size([1, 5, 3072]) 
+id='no_cache' len=5 layer=17 input hidden state tensor shape:torch.Size([1, 5, 3072]) 
+id='no_cache' len=5 layer=18 input hidden state tensor shape:torch.Size([1, 5, 3072]) 
+id='no_cache' len=5 layer=19 input hidden state tensor shape:torch.Size([1, 5, 3072]) 
+id='no_cache' len=5 layer=20 input hidden state tensor shape:torch.Size([1, 5, 3072]) 
+id='no_cache' len=5 layer=21 input hidden state tensor shape:torch.Size([1, 5, 3072]) 
+id='no_cache' len=5 layer=22 input hidden state tensor shape:torch.Size([1, 5, 3072]) 
+id='no_cache' len=5 layer=23 input hidden state tensor shape:torch.Size([1, 5, 3072]) 
+id='no_cache' len=5 layer=24 input hidden state tensor shape:torch.Size([1, 5, 3072]) 
+id='no_cache' len=5 layer=25 input hidden state tensor shape:torch.Size([1, 5, 3072]) 
+id='no_cache' len=5 layer=26 input hidden state tensor shape:torch.Size([1, 5, 3072]) 
+id='no_cache' len=5 layer=27 input hidden state tensor shape:torch.Size([1, 5, 3072]) 
+PREFILL round=4 layer=0: input hidden state (dynamic caching) EQUAL to corresponding column in hidden state tensor without cache
+PREFILL round=4 layer=1: input hidden state (dynamic caching) EQUAL to corresponding column in hidden state tensor without cache
+PREFILL round=4 layer=2: input hidden state (dynamic caching) EQUAL to corresponding column in hidden state tensor without cache
+PREFILL round=4 layer=3: input hidden state (dynamic caching) EQUAL to corresponding column in hidden state tensor without cache
+PREFILL round=4 layer=4: input hidden state (dynamic caching) EQUAL to corresponding column in hidden state tensor without cache
+PREFILL round=4 layer=5: input hidden state (dynamic caching) EQUAL to corresponding column in hidden state tensor without cache
+PREFILL round=4 layer=6: input hidden state (dynamic caching) EQUAL to corresponding column in hidden state tensor without cache
+PREFILL round=4 layer=7: input hidden state (dynamic caching) EQUAL to corresponding column in hidden state tensor without cache
+PREFILL round=4 layer=8: input hidden state (dynamic caching) EQUAL to corresponding column in hidden state tensor without cache
+PREFILL round=4 layer=9: input hidden state (dynamic caching) EQUAL to corresponding column in hidden state tensor without cache
+PREFILL round=4 layer=10: input hidden state (dynamic caching) EQUAL to corresponding column in hidden state tensor without cache
+PREFILL round=4 layer=11: input hidden state (dynamic caching) EQUAL to corresponding column in hidden state tensor without cache
+PREFILL round=4 layer=12: input hidden state (dynamic caching) EQUAL to corresponding column in hidden state tensor without cache
+PREFILL round=4 layer=13: input hidden state (dynamic caching) EQUAL to corresponding column in hidden state tensor without cache
+PREFILL round=4 layer=14: input hidden state (dynamic caching) EQUAL to corresponding column in hidden state tensor without cache
+PREFILL round=4 layer=15: input hidden state (dynamic caching) EQUAL to corresponding column in hidden state tensor without cache
+PREFILL round=4 layer=16: input hidden state (dynamic caching) EQUAL to corresponding column in hidden state tensor without cache
+PREFILL round=4 layer=17: input hidden state (dynamic caching) EQUAL to corresponding column in hidden state tensor without cache
+PREFILL round=4 layer=18: input hidden state (dynamic caching) EQUAL to corresponding column in hidden state tensor without cache
+PREFILL round=4 layer=19: input hidden state (dynamic caching) EQUAL to corresponding column in hidden state tensor without cache
+PREFILL round=4 layer=20: input hidden state (dynamic caching) EQUAL to corresponding column in hidden state tensor without cache
+PREFILL round=4 layer=21: input hidden state (dynamic caching) EQUAL to corresponding column in hidden state tensor without cache
+PREFILL round=4 layer=22: input hidden state (dynamic caching) EQUAL to corresponding column in hidden state tensor without cache
+PREFILL round=4 layer=23: input hidden state (dynamic caching) EQUAL to corresponding column in hidden state tensor without cache
+PREFILL round=4 layer=24: input hidden state (dynamic caching) EQUAL to corresponding column in hidden state tensor without cache
+PREFILL round=4 layer=25: input hidden state (dynamic caching) EQUAL to corresponding column in hidden state tensor without cache
+PREFILL round=4 layer=26: input hidden state (dynamic caching) EQUAL to corresponding column in hidden state tensor without cache
+PREFILL round=4 layer=27: input hidden state (dynamic caching) EQUAL to corresponding column in hidden state tensor without cache
+round=5 layer=0: input hidden state (dynamic caching) EQUAL to corresponding column in hidden state tensor without cache
+round=5 layer=1: input hidden state (dynamic caching) NOT EQUAL to corresponding column in hidden state tensor without cache
+round=5 layer=2: input hidden state (dynamic caching) NOT EQUAL to corresponding column in hidden state tensor without cache
+round=5 layer=3: input hidden state (dynamic caching) NOT EQUAL to corresponding column in hidden state tensor without cache
+round=5 layer=4: input hidden state (dynamic caching) NOT EQUAL to corresponding column in hidden state tensor without cache
+round=5 layer=5: input hidden state (dynamic caching) NOT EQUAL to corresponding column in hidden state tensor without cache
+round=5 layer=6: input hidden state (dynamic caching) NOT EQUAL to corresponding column in hidden state tensor without cache
+round=5 layer=7: input hidden state (dynamic caching) NOT EQUAL to corresponding column in hidden state tensor without cache
+round=5 layer=8: input hidden state (dynamic caching) NOT EQUAL to corresponding column in hidden state tensor without cache
+round=5 layer=9: input hidden state (dynamic caching) NOT EQUAL to corresponding column in hidden state tensor without cache
+round=5 layer=10: input hidden state (dynamic caching) NOT EQUAL to corresponding column in hidden state tensor without cache
+round=5 layer=11: input hidden state (dynamic caching) NOT EQUAL to corresponding column in hidden state tensor without cache
+round=5 layer=12: input hidden state (dynamic caching) NOT EQUAL to corresponding column in hidden state tensor without cache
+round=5 layer=13: input hidden state (dynamic caching) NOT EQUAL to corresponding column in hidden state tensor without cache
+round=5 layer=14: input hidden state (dynamic caching) NOT EQUAL to corresponding column in hidden state tensor without cache
+round=5 layer=15: input hidden state (dynamic caching) NOT EQUAL to corresponding column in hidden state tensor without cache
+round=5 layer=16: input hidden state (dynamic caching) NOT EQUAL to corresponding column in hidden state tensor without cache
+round=5 layer=17: input hidden state (dynamic caching) NOT EQUAL to corresponding column in hidden state tensor without cache
+round=5 layer=18: input hidden state (dynamic caching) NOT EQUAL to corresponding column in hidden state tensor without cache
+round=5 layer=19: input hidden state (dynamic caching) NOT EQUAL to corresponding column in hidden state tensor without cache
+round=5 layer=20: input hidden state (dynamic caching) NOT EQUAL to corresponding column in hidden state tensor without cache
+round=5 layer=21: input hidden state (dynamic caching) NOT EQUAL to corresponding column in hidden state tensor without cache
+round=5 layer=22: input hidden state (dynamic caching) NOT EQUAL to corresponding column in hidden state tensor without cache
+round=5 layer=23: input hidden state (dynamic caching) NOT EQUAL to corresponding column in hidden state tensor without cache
+round=5 layer=24: input hidden state (dynamic caching) NOT EQUAL to corresponding column in hidden state tensor without cache
+round=5 layer=25: input hidden state (dynamic caching) NOT EQUAL to corresponding column in hidden state tensor without cache
+round=5 layer=26: input hidden state (dynamic caching) NOT EQUAL to corresponding column in hidden state tensor without cache
+round=5 layer=27: input hidden state (dynamic caching) NOT EQUAL to corresponding column in hidden state tensor without cache
+Pre-cache keys available for rounds [4, 5] for cache type dynamic
+round=4 layer_idx=0 d[round][layer_idx].shape=torch.Size([1, 16, 4, 256])
+round=5 layer_idx=0 d[round][layer_idx].shape=torch.Size([1, 16, 1, 256])
+Pre-cache keys available for rounds [4, 5] for cache type no_cache
+round=4 layer_idx=0 d[round][layer_idx].shape=torch.Size([1, 16, 4, 256])
+round=5 layer_idx=0 d[round][layer_idx].shape=torch.Size([1, 16, 5, 256])
+Post-cache keys available for rounds [4, 5] for cache type dynamic
+round=4 layer_idx=0 d[round][layer_idx].shape=torch.Size([1, 16, 4, 256])
+round=5 layer_idx=0 d[round][layer_idx].shape=torch.Size([1, 16, 5, 256])
+Post-cache keys available for rounds [4, 5] for cache type no_cache
+round=4 layer_idx=0 d[round][layer_idx].shape=torch.Size([1, 16, 4, 256])
+round=5 layer_idx=0 d[round][layer_idx].shape=torch.Size([1, 16, 5, 256])
+PREFILL round=4 layer=0: pre-cache key tensor EQUAL to corresponding column in key tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 4, 256]) s.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=0: Post-cache key tensors EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 4, 256]) t_post_nocache.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=0: pre-cache value tensor EQUAL to corresponding column in value tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 4, 256]) s.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=0: Post-cache value tensors EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 4, 256]) t_post_nocache.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=1: pre-cache key tensor EQUAL to corresponding column in key tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 4, 256]) s.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=1: Post-cache key tensors EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 4, 256]) t_post_nocache.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=1: pre-cache value tensor EQUAL to corresponding column in value tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 4, 256]) s.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=1: Post-cache value tensors EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 4, 256]) t_post_nocache.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=2: pre-cache key tensor EQUAL to corresponding column in key tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 4, 256]) s.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=2: Post-cache key tensors EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 4, 256]) t_post_nocache.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=2: pre-cache value tensor EQUAL to corresponding column in value tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 4, 256]) s.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=2: Post-cache value tensors EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 4, 256]) t_post_nocache.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=3: pre-cache key tensor EQUAL to corresponding column in key tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 4, 256]) s.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=3: Post-cache key tensors EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 4, 256]) t_post_nocache.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=3: pre-cache value tensor EQUAL to corresponding column in value tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 4, 256]) s.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=3: Post-cache value tensors EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 4, 256]) t_post_nocache.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=4: pre-cache key tensor EQUAL to corresponding column in key tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 4, 256]) s.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=4: Post-cache key tensors EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 4, 256]) t_post_nocache.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=4: pre-cache value tensor EQUAL to corresponding column in value tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 4, 256]) s.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=4: Post-cache value tensors EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 4, 256]) t_post_nocache.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=5: pre-cache key tensor EQUAL to corresponding column in key tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 4, 256]) s.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=5: Post-cache key tensors EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 4, 256]) t_post_nocache.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=5: pre-cache value tensor EQUAL to corresponding column in value tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 4, 256]) s.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=5: Post-cache value tensors EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 4, 256]) t_post_nocache.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=6: pre-cache key tensor EQUAL to corresponding column in key tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 4, 256]) s.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=6: Post-cache key tensors EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 4, 256]) t_post_nocache.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=6: pre-cache value tensor EQUAL to corresponding column in value tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 4, 256]) s.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=6: Post-cache value tensors EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 4, 256]) t_post_nocache.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=7: pre-cache key tensor EQUAL to corresponding column in key tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 4, 256]) s.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=7: Post-cache key tensors EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 4, 256]) t_post_nocache.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=7: pre-cache value tensor EQUAL to corresponding column in value tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 4, 256]) s.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=7: Post-cache value tensors EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 4, 256]) t_post_nocache.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=8: pre-cache key tensor EQUAL to corresponding column in key tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 4, 256]) s.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=8: Post-cache key tensors EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 4, 256]) t_post_nocache.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=8: pre-cache value tensor EQUAL to corresponding column in value tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 4, 256]) s.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=8: Post-cache value tensors EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 4, 256]) t_post_nocache.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=9: pre-cache key tensor EQUAL to corresponding column in key tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 4, 256]) s.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=9: Post-cache key tensors EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 4, 256]) t_post_nocache.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=9: pre-cache value tensor EQUAL to corresponding column in value tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 4, 256]) s.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=9: Post-cache value tensors EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 4, 256]) t_post_nocache.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=10: pre-cache key tensor EQUAL to corresponding column in key tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 4, 256]) s.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=10: Post-cache key tensors EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 4, 256]) t_post_nocache.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=10: pre-cache value tensor EQUAL to corresponding column in value tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 4, 256]) s.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=10: Post-cache value tensors EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 4, 256]) t_post_nocache.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=11: pre-cache key tensor EQUAL to corresponding column in key tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 4, 256]) s.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=11: Post-cache key tensors EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 4, 256]) t_post_nocache.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=11: pre-cache value tensor EQUAL to corresponding column in value tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 4, 256]) s.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=11: Post-cache value tensors EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 4, 256]) t_post_nocache.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=12: pre-cache key tensor EQUAL to corresponding column in key tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 4, 256]) s.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=12: Post-cache key tensors EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 4, 256]) t_post_nocache.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=12: pre-cache value tensor EQUAL to corresponding column in value tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 4, 256]) s.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=12: Post-cache value tensors EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 4, 256]) t_post_nocache.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=13: pre-cache key tensor EQUAL to corresponding column in key tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 4, 256]) s.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=13: Post-cache key tensors EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 4, 256]) t_post_nocache.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=13: pre-cache value tensor EQUAL to corresponding column in value tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 4, 256]) s.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=13: Post-cache value tensors EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 4, 256]) t_post_nocache.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=14: pre-cache key tensor EQUAL to corresponding column in key tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 4, 256]) s.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=14: Post-cache key tensors EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 4, 256]) t_post_nocache.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=14: pre-cache value tensor EQUAL to corresponding column in value tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 4, 256]) s.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=14: Post-cache value tensors EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 4, 256]) t_post_nocache.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=15: pre-cache key tensor EQUAL to corresponding column in key tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 4, 256]) s.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=15: Post-cache key tensors EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 4, 256]) t_post_nocache.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=15: pre-cache value tensor EQUAL to corresponding column in value tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 4, 256]) s.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=15: Post-cache value tensors EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 4, 256]) t_post_nocache.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=16: pre-cache key tensor EQUAL to corresponding column in key tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 4, 256]) s.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=16: Post-cache key tensors EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 4, 256]) t_post_nocache.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=16: pre-cache value tensor EQUAL to corresponding column in value tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 4, 256]) s.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=16: Post-cache value tensors EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 4, 256]) t_post_nocache.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=17: pre-cache key tensor EQUAL to corresponding column in key tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 4, 256]) s.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=17: Post-cache key tensors EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 4, 256]) t_post_nocache.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=17: pre-cache value tensor EQUAL to corresponding column in value tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 4, 256]) s.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=17: Post-cache value tensors EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 4, 256]) t_post_nocache.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=18: pre-cache key tensor EQUAL to corresponding column in key tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 4, 256]) s.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=18: Post-cache key tensors EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 4, 256]) t_post_nocache.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=18: pre-cache value tensor EQUAL to corresponding column in value tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 4, 256]) s.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=18: Post-cache value tensors EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 4, 256]) t_post_nocache.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=19: pre-cache key tensor EQUAL to corresponding column in key tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 4, 256]) s.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=19: Post-cache key tensors EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 4, 256]) t_post_nocache.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=19: pre-cache value tensor EQUAL to corresponding column in value tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 4, 256]) s.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=19: Post-cache value tensors EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 4, 256]) t_post_nocache.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=20: pre-cache key tensor EQUAL to corresponding column in key tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 4, 256]) s.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=20: Post-cache key tensors EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 4, 256]) t_post_nocache.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=20: pre-cache value tensor EQUAL to corresponding column in value tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 4, 256]) s.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=20: Post-cache value tensors EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 4, 256]) t_post_nocache.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=21: pre-cache key tensor EQUAL to corresponding column in key tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 4, 256]) s.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=21: Post-cache key tensors EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 4, 256]) t_post_nocache.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=21: pre-cache value tensor EQUAL to corresponding column in value tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 4, 256]) s.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=21: Post-cache value tensors EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 4, 256]) t_post_nocache.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=22: pre-cache key tensor EQUAL to corresponding column in key tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 4, 256]) s.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=22: Post-cache key tensors EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 4, 256]) t_post_nocache.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=22: pre-cache value tensor EQUAL to corresponding column in value tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 4, 256]) s.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=22: Post-cache value tensors EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 4, 256]) t_post_nocache.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=23: pre-cache key tensor EQUAL to corresponding column in key tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 4, 256]) s.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=23: Post-cache key tensors EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 4, 256]) t_post_nocache.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=23: pre-cache value tensor EQUAL to corresponding column in value tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 4, 256]) s.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=23: Post-cache value tensors EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 4, 256]) t_post_nocache.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=24: pre-cache key tensor EQUAL to corresponding column in key tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 4, 256]) s.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=24: Post-cache key tensors EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 4, 256]) t_post_nocache.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=24: pre-cache value tensor EQUAL to corresponding column in value tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 4, 256]) s.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=24: Post-cache value tensors EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 4, 256]) t_post_nocache.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=25: pre-cache key tensor EQUAL to corresponding column in key tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 4, 256]) s.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=25: Post-cache key tensors EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 4, 256]) t_post_nocache.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=25: pre-cache value tensor EQUAL to corresponding column in value tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 4, 256]) s.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=25: Post-cache value tensors EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 4, 256]) t_post_nocache.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=26: pre-cache key tensor EQUAL to corresponding column in key tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 4, 256]) s.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=26: Post-cache key tensors EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 4, 256]) t_post_nocache.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=26: pre-cache value tensor EQUAL to corresponding column in value tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 4, 256]) s.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=26: Post-cache value tensors EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 4, 256]) t_post_nocache.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=27: pre-cache key tensor EQUAL to corresponding column in key tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 4, 256]) s.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=27: Post-cache key tensors EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 4, 256]) t_post_nocache.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=27: pre-cache value tensor EQUAL to corresponding column in value tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 4, 256]) s.shape=torch.Size([1, 16, 4, 256]) 
+PREFILL round=4 layer=27: Post-cache value tensors EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 4, 256]) t_post_nocache.shape=torch.Size([1, 16, 4, 256]) 
+round=5 layer=0: pre-cache key tensor EQUAL to corresponding column in key tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 1, 256]) s.shape=torch.Size([1, 16, 1, 256]) 
+round=5 layer=0: Post-cache key tensors EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 5, 256]) t_post_nocache.shape=torch.Size([1, 16, 5, 256]) 
+t_prev.shape=torch.Size([1, 16, 4, 256]) t_current.shape=torch.Size([1, 16, 5, 256]) s.shape=torch.Size([1, 16, 4, 256])
+round=5 layer=0: Columns of post-cache key tensor EQUAL with the previous round
+round=5 layer=0: pre-cache value tensor EQUAL to corresponding column in value tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 1, 256]) s.shape=torch.Size([1, 16, 1, 256]) 
+round=5 layer=0: Post-cache value tensors EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 5, 256]) t_post_nocache.shape=torch.Size([1, 16, 5, 256]) 
+t_prev.shape=torch.Size([1, 16, 4, 256]) t_current.shape=torch.Size([1, 16, 5, 256]) s.shape=torch.Size([1, 16, 4, 256])
+round=5 layer=0: Columns of post-cache value tensor EQUAL with the previous round
+round=5 layer=1: pre-cache key tensor EQUAL to corresponding column in key tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 1, 256]) s.shape=torch.Size([1, 16, 1, 256]) 
+round=5 layer=1: Post-cache key tensors NOT EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 5, 256]) t_post_nocache.shape=torch.Size([1, 16, 5, 256]) 
+t_prev.shape=torch.Size([1, 16, 4, 256]) t_current.shape=torch.Size([1, 16, 5, 256]) s.shape=torch.Size([1, 16, 4, 256])
+round=5 layer=1: Columns of post-cache key tensor EQUAL with the previous round
+round=5 layer=1: pre-cache value tensor EQUAL to corresponding column in value tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 1, 256]) s.shape=torch.Size([1, 16, 1, 256]) 
+round=5 layer=1: Post-cache value tensors NOT EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 5, 256]) t_post_nocache.shape=torch.Size([1, 16, 5, 256]) 
+t_prev.shape=torch.Size([1, 16, 4, 256]) t_current.shape=torch.Size([1, 16, 5, 256]) s.shape=torch.Size([1, 16, 4, 256])
+round=5 layer=1: Columns of post-cache value tensor EQUAL with the previous round
+round=5 layer=2: pre-cache key tensor EQUAL to corresponding column in key tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 1, 256]) s.shape=torch.Size([1, 16, 1, 256]) 
+round=5 layer=2: Post-cache key tensors NOT EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 5, 256]) t_post_nocache.shape=torch.Size([1, 16, 5, 256]) 
+t_prev.shape=torch.Size([1, 16, 4, 256]) t_current.shape=torch.Size([1, 16, 5, 256]) s.shape=torch.Size([1, 16, 4, 256])
+round=5 layer=2: Columns of post-cache key tensor EQUAL with the previous round
+round=5 layer=2: pre-cache value tensor EQUAL to corresponding column in value tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 1, 256]) s.shape=torch.Size([1, 16, 1, 256]) 
+round=5 layer=2: Post-cache value tensors NOT EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 5, 256]) t_post_nocache.shape=torch.Size([1, 16, 5, 256]) 
+t_prev.shape=torch.Size([1, 16, 4, 256]) t_current.shape=torch.Size([1, 16, 5, 256]) s.shape=torch.Size([1, 16, 4, 256])
+round=5 layer=2: Columns of post-cache value tensor EQUAL with the previous round
+round=5 layer=3: pre-cache key tensor EQUAL to corresponding column in key tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 1, 256]) s.shape=torch.Size([1, 16, 1, 256]) 
+round=5 layer=3: Post-cache key tensors NOT EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 5, 256]) t_post_nocache.shape=torch.Size([1, 16, 5, 256]) 
+t_prev.shape=torch.Size([1, 16, 4, 256]) t_current.shape=torch.Size([1, 16, 5, 256]) s.shape=torch.Size([1, 16, 4, 256])
+round=5 layer=3: Columns of post-cache key tensor EQUAL with the previous round
+round=5 layer=3: pre-cache value tensor EQUAL to corresponding column in value tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 1, 256]) s.shape=torch.Size([1, 16, 1, 256]) 
+round=5 layer=3: Post-cache value tensors NOT EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 5, 256]) t_post_nocache.shape=torch.Size([1, 16, 5, 256]) 
+t_prev.shape=torch.Size([1, 16, 4, 256]) t_current.shape=torch.Size([1, 16, 5, 256]) s.shape=torch.Size([1, 16, 4, 256])
+round=5 layer=3: Columns of post-cache value tensor EQUAL with the previous round
+round=5 layer=4: pre-cache key tensor EQUAL to corresponding column in key tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 1, 256]) s.shape=torch.Size([1, 16, 1, 256]) 
+round=5 layer=4: Post-cache key tensors NOT EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 5, 256]) t_post_nocache.shape=torch.Size([1, 16, 5, 256]) 
+t_prev.shape=torch.Size([1, 16, 4, 256]) t_current.shape=torch.Size([1, 16, 5, 256]) s.shape=torch.Size([1, 16, 4, 256])
+round=5 layer=4: Columns of post-cache key tensor EQUAL with the previous round
+round=5 layer=4: pre-cache value tensor EQUAL to corresponding column in value tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 1, 256]) s.shape=torch.Size([1, 16, 1, 256]) 
+round=5 layer=4: Post-cache value tensors NOT EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 5, 256]) t_post_nocache.shape=torch.Size([1, 16, 5, 256]) 
+t_prev.shape=torch.Size([1, 16, 4, 256]) t_current.shape=torch.Size([1, 16, 5, 256]) s.shape=torch.Size([1, 16, 4, 256])
+round=5 layer=4: Columns of post-cache value tensor EQUAL with the previous round
+round=5 layer=5: pre-cache key tensor EQUAL to corresponding column in key tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 1, 256]) s.shape=torch.Size([1, 16, 1, 256]) 
+round=5 layer=5: Post-cache key tensors NOT EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 5, 256]) t_post_nocache.shape=torch.Size([1, 16, 5, 256]) 
+t_prev.shape=torch.Size([1, 16, 4, 256]) t_current.shape=torch.Size([1, 16, 5, 256]) s.shape=torch.Size([1, 16, 4, 256])
+round=5 layer=5: Columns of post-cache key tensor EQUAL with the previous round
+round=5 layer=5: pre-cache value tensor EQUAL to corresponding column in value tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 1, 256]) s.shape=torch.Size([1, 16, 1, 256]) 
+round=5 layer=5: Post-cache value tensors NOT EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 5, 256]) t_post_nocache.shape=torch.Size([1, 16, 5, 256]) 
+t_prev.shape=torch.Size([1, 16, 4, 256]) t_current.shape=torch.Size([1, 16, 5, 256]) s.shape=torch.Size([1, 16, 4, 256])
+round=5 layer=5: Columns of post-cache value tensor EQUAL with the previous round
+round=5 layer=6: pre-cache key tensor EQUAL to corresponding column in key tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 1, 256]) s.shape=torch.Size([1, 16, 1, 256]) 
+round=5 layer=6: Post-cache key tensors NOT EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 5, 256]) t_post_nocache.shape=torch.Size([1, 16, 5, 256]) 
+t_prev.shape=torch.Size([1, 16, 4, 256]) t_current.shape=torch.Size([1, 16, 5, 256]) s.shape=torch.Size([1, 16, 4, 256])
+round=5 layer=6: Columns of post-cache key tensor EQUAL with the previous round
+round=5 layer=6: pre-cache value tensor EQUAL to corresponding column in value tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 1, 256]) s.shape=torch.Size([1, 16, 1, 256]) 
+round=5 layer=6: Post-cache value tensors NOT EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 5, 256]) t_post_nocache.shape=torch.Size([1, 16, 5, 256]) 
+t_prev.shape=torch.Size([1, 16, 4, 256]) t_current.shape=torch.Size([1, 16, 5, 256]) s.shape=torch.Size([1, 16, 4, 256])
+round=5 layer=6: Columns of post-cache value tensor EQUAL with the previous round
+round=5 layer=7: pre-cache key tensor EQUAL to corresponding column in key tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 1, 256]) s.shape=torch.Size([1, 16, 1, 256]) 
+round=5 layer=7: Post-cache key tensors NOT EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 5, 256]) t_post_nocache.shape=torch.Size([1, 16, 5, 256]) 
+t_prev.shape=torch.Size([1, 16, 4, 256]) t_current.shape=torch.Size([1, 16, 5, 256]) s.shape=torch.Size([1, 16, 4, 256])
+round=5 layer=7: Columns of post-cache key tensor EQUAL with the previous round
+round=5 layer=7: pre-cache value tensor EQUAL to corresponding column in value tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 1, 256]) s.shape=torch.Size([1, 16, 1, 256]) 
+round=5 layer=7: Post-cache value tensors NOT EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 5, 256]) t_post_nocache.shape=torch.Size([1, 16, 5, 256]) 
+t_prev.shape=torch.Size([1, 16, 4, 256]) t_current.shape=torch.Size([1, 16, 5, 256]) s.shape=torch.Size([1, 16, 4, 256])
+round=5 layer=7: Columns of post-cache value tensor EQUAL with the previous round
+round=5 layer=8: pre-cache key tensor EQUAL to corresponding column in key tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 1, 256]) s.shape=torch.Size([1, 16, 1, 256]) 
+round=5 layer=8: Post-cache key tensors NOT EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 5, 256]) t_post_nocache.shape=torch.Size([1, 16, 5, 256]) 
+t_prev.shape=torch.Size([1, 16, 4, 256]) t_current.shape=torch.Size([1, 16, 5, 256]) s.shape=torch.Size([1, 16, 4, 256])
+round=5 layer=8: Columns of post-cache key tensor EQUAL with the previous round
+round=5 layer=8: pre-cache value tensor EQUAL to corresponding column in value tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 1, 256]) s.shape=torch.Size([1, 16, 1, 256]) 
+round=5 layer=8: Post-cache value tensors NOT EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 5, 256]) t_post_nocache.shape=torch.Size([1, 16, 5, 256]) 
+t_prev.shape=torch.Size([1, 16, 4, 256]) t_current.shape=torch.Size([1, 16, 5, 256]) s.shape=torch.Size([1, 16, 4, 256])
+round=5 layer=8: Columns of post-cache value tensor EQUAL with the previous round
+round=5 layer=9: pre-cache key tensor EQUAL to corresponding column in key tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 1, 256]) s.shape=torch.Size([1, 16, 1, 256]) 
+round=5 layer=9: Post-cache key tensors NOT EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 5, 256]) t_post_nocache.shape=torch.Size([1, 16, 5, 256]) 
+t_prev.shape=torch.Size([1, 16, 4, 256]) t_current.shape=torch.Size([1, 16, 5, 256]) s.shape=torch.Size([1, 16, 4, 256])
+round=5 layer=9: Columns of post-cache key tensor EQUAL with the previous round
+round=5 layer=9: pre-cache value tensor EQUAL to corresponding column in value tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 1, 256]) s.shape=torch.Size([1, 16, 1, 256]) 
+round=5 layer=9: Post-cache value tensors NOT EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 5, 256]) t_post_nocache.shape=torch.Size([1, 16, 5, 256]) 
+t_prev.shape=torch.Size([1, 16, 4, 256]) t_current.shape=torch.Size([1, 16, 5, 256]) s.shape=torch.Size([1, 16, 4, 256])
+round=5 layer=9: Columns of post-cache value tensor EQUAL with the previous round
+round=5 layer=10: pre-cache key tensor EQUAL to corresponding column in key tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 1, 256]) s.shape=torch.Size([1, 16, 1, 256]) 
+round=5 layer=10: Post-cache key tensors NOT EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 5, 256]) t_post_nocache.shape=torch.Size([1, 16, 5, 256]) 
+t_prev.shape=torch.Size([1, 16, 4, 256]) t_current.shape=torch.Size([1, 16, 5, 256]) s.shape=torch.Size([1, 16, 4, 256])
+round=5 layer=10: Columns of post-cache key tensor EQUAL with the previous round
+round=5 layer=10: pre-cache value tensor EQUAL to corresponding column in value tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 1, 256]) s.shape=torch.Size([1, 16, 1, 256]) 
+round=5 layer=10: Post-cache value tensors NOT EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 5, 256]) t_post_nocache.shape=torch.Size([1, 16, 5, 256]) 
+t_prev.shape=torch.Size([1, 16, 4, 256]) t_current.shape=torch.Size([1, 16, 5, 256]) s.shape=torch.Size([1, 16, 4, 256])
+round=5 layer=10: Columns of post-cache value tensor EQUAL with the previous round
+round=5 layer=11: pre-cache key tensor EQUAL to corresponding column in key tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 1, 256]) s.shape=torch.Size([1, 16, 1, 256]) 
+round=5 layer=11: Post-cache key tensors NOT EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 5, 256]) t_post_nocache.shape=torch.Size([1, 16, 5, 256]) 
+t_prev.shape=torch.Size([1, 16, 4, 256]) t_current.shape=torch.Size([1, 16, 5, 256]) s.shape=torch.Size([1, 16, 4, 256])
+round=5 layer=11: Columns of post-cache key tensor EQUAL with the previous round
+round=5 layer=11: pre-cache value tensor EQUAL to corresponding column in value tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 1, 256]) s.shape=torch.Size([1, 16, 1, 256]) 
+round=5 layer=11: Post-cache value tensors NOT EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 5, 256]) t_post_nocache.shape=torch.Size([1, 16, 5, 256]) 
+t_prev.shape=torch.Size([1, 16, 4, 256]) t_current.shape=torch.Size([1, 16, 5, 256]) s.shape=torch.Size([1, 16, 4, 256])
+round=5 layer=11: Columns of post-cache value tensor EQUAL with the previous round
+round=5 layer=12: pre-cache key tensor EQUAL to corresponding column in key tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 1, 256]) s.shape=torch.Size([1, 16, 1, 256]) 
+round=5 layer=12: Post-cache key tensors NOT EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 5, 256]) t_post_nocache.shape=torch.Size([1, 16, 5, 256]) 
+t_prev.shape=torch.Size([1, 16, 4, 256]) t_current.shape=torch.Size([1, 16, 5, 256]) s.shape=torch.Size([1, 16, 4, 256])
+round=5 layer=12: Columns of post-cache key tensor EQUAL with the previous round
+round=5 layer=12: pre-cache value tensor EQUAL to corresponding column in value tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 1, 256]) s.shape=torch.Size([1, 16, 1, 256]) 
+round=5 layer=12: Post-cache value tensors NOT EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 5, 256]) t_post_nocache.shape=torch.Size([1, 16, 5, 256]) 
+t_prev.shape=torch.Size([1, 16, 4, 256]) t_current.shape=torch.Size([1, 16, 5, 256]) s.shape=torch.Size([1, 16, 4, 256])
+round=5 layer=12: Columns of post-cache value tensor EQUAL with the previous round
+round=5 layer=13: pre-cache key tensor EQUAL to corresponding column in key tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 1, 256]) s.shape=torch.Size([1, 16, 1, 256]) 
+round=5 layer=13: Post-cache key tensors NOT EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 5, 256]) t_post_nocache.shape=torch.Size([1, 16, 5, 256]) 
+t_prev.shape=torch.Size([1, 16, 4, 256]) t_current.shape=torch.Size([1, 16, 5, 256]) s.shape=torch.Size([1, 16, 4, 256])
+round=5 layer=13: Columns of post-cache key tensor EQUAL with the previous round
+round=5 layer=13: pre-cache value tensor EQUAL to corresponding column in value tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 1, 256]) s.shape=torch.Size([1, 16, 1, 256]) 
+round=5 layer=13: Post-cache value tensors NOT EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 5, 256]) t_post_nocache.shape=torch.Size([1, 16, 5, 256]) 
+t_prev.shape=torch.Size([1, 16, 4, 256]) t_current.shape=torch.Size([1, 16, 5, 256]) s.shape=torch.Size([1, 16, 4, 256])
+round=5 layer=13: Columns of post-cache value tensor EQUAL with the previous round
+round=5 layer=14: pre-cache key tensor EQUAL to corresponding column in key tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 1, 256]) s.shape=torch.Size([1, 16, 1, 256]) 
+round=5 layer=14: Post-cache key tensors NOT EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 5, 256]) t_post_nocache.shape=torch.Size([1, 16, 5, 256]) 
+t_prev.shape=torch.Size([1, 16, 4, 256]) t_current.shape=torch.Size([1, 16, 5, 256]) s.shape=torch.Size([1, 16, 4, 256])
+round=5 layer=14: Columns of post-cache key tensor EQUAL with the previous round
+round=5 layer=14: pre-cache value tensor EQUAL to corresponding column in value tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 1, 256]) s.shape=torch.Size([1, 16, 1, 256]) 
+round=5 layer=14: Post-cache value tensors NOT EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 5, 256]) t_post_nocache.shape=torch.Size([1, 16, 5, 256]) 
+t_prev.shape=torch.Size([1, 16, 4, 256]) t_current.shape=torch.Size([1, 16, 5, 256]) s.shape=torch.Size([1, 16, 4, 256])
+round=5 layer=14: Columns of post-cache value tensor EQUAL with the previous round
+round=5 layer=15: pre-cache key tensor EQUAL to corresponding column in key tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 1, 256]) s.shape=torch.Size([1, 16, 1, 256]) 
+round=5 layer=15: Post-cache key tensors NOT EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 5, 256]) t_post_nocache.shape=torch.Size([1, 16, 5, 256]) 
+t_prev.shape=torch.Size([1, 16, 4, 256]) t_current.shape=torch.Size([1, 16, 5, 256]) s.shape=torch.Size([1, 16, 4, 256])
+round=5 layer=15: Columns of post-cache key tensor EQUAL with the previous round
+round=5 layer=15: pre-cache value tensor EQUAL to corresponding column in value tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 1, 256]) s.shape=torch.Size([1, 16, 1, 256]) 
+round=5 layer=15: Post-cache value tensors NOT EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 5, 256]) t_post_nocache.shape=torch.Size([1, 16, 5, 256]) 
+t_prev.shape=torch.Size([1, 16, 4, 256]) t_current.shape=torch.Size([1, 16, 5, 256]) s.shape=torch.Size([1, 16, 4, 256])
+round=5 layer=15: Columns of post-cache value tensor EQUAL with the previous round
+round=5 layer=16: pre-cache key tensor EQUAL to corresponding column in key tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 1, 256]) s.shape=torch.Size([1, 16, 1, 256]) 
+round=5 layer=16: Post-cache key tensors NOT EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 5, 256]) t_post_nocache.shape=torch.Size([1, 16, 5, 256]) 
+t_prev.shape=torch.Size([1, 16, 4, 256]) t_current.shape=torch.Size([1, 16, 5, 256]) s.shape=torch.Size([1, 16, 4, 256])
+round=5 layer=16: Columns of post-cache key tensor EQUAL with the previous round
+round=5 layer=16: pre-cache value tensor EQUAL to corresponding column in value tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 1, 256]) s.shape=torch.Size([1, 16, 1, 256]) 
+round=5 layer=16: Post-cache value tensors NOT EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 5, 256]) t_post_nocache.shape=torch.Size([1, 16, 5, 256]) 
+t_prev.shape=torch.Size([1, 16, 4, 256]) t_current.shape=torch.Size([1, 16, 5, 256]) s.shape=torch.Size([1, 16, 4, 256])
+round=5 layer=16: Columns of post-cache value tensor EQUAL with the previous round
+round=5 layer=17: pre-cache key tensor EQUAL to corresponding column in key tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 1, 256]) s.shape=torch.Size([1, 16, 1, 256]) 
+round=5 layer=17: Post-cache key tensors NOT EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 5, 256]) t_post_nocache.shape=torch.Size([1, 16, 5, 256]) 
+t_prev.shape=torch.Size([1, 16, 4, 256]) t_current.shape=torch.Size([1, 16, 5, 256]) s.shape=torch.Size([1, 16, 4, 256])
+round=5 layer=17: Columns of post-cache key tensor EQUAL with the previous round
+round=5 layer=17: pre-cache value tensor EQUAL to corresponding column in value tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 1, 256]) s.shape=torch.Size([1, 16, 1, 256]) 
+round=5 layer=17: Post-cache value tensors NOT EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 5, 256]) t_post_nocache.shape=torch.Size([1, 16, 5, 256]) 
+t_prev.shape=torch.Size([1, 16, 4, 256]) t_current.shape=torch.Size([1, 16, 5, 256]) s.shape=torch.Size([1, 16, 4, 256])
+round=5 layer=17: Columns of post-cache value tensor EQUAL with the previous round
+round=5 layer=18: pre-cache key tensor EQUAL to corresponding column in key tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 1, 256]) s.shape=torch.Size([1, 16, 1, 256]) 
+round=5 layer=18: Post-cache key tensors NOT EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 5, 256]) t_post_nocache.shape=torch.Size([1, 16, 5, 256]) 
+t_prev.shape=torch.Size([1, 16, 4, 256]) t_current.shape=torch.Size([1, 16, 5, 256]) s.shape=torch.Size([1, 16, 4, 256])
+round=5 layer=18: Columns of post-cache key tensor EQUAL with the previous round
+round=5 layer=18: pre-cache value tensor EQUAL to corresponding column in value tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 1, 256]) s.shape=torch.Size([1, 16, 1, 256]) 
+round=5 layer=18: Post-cache value tensors NOT EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 5, 256]) t_post_nocache.shape=torch.Size([1, 16, 5, 256]) 
+t_prev.shape=torch.Size([1, 16, 4, 256]) t_current.shape=torch.Size([1, 16, 5, 256]) s.shape=torch.Size([1, 16, 4, 256])
+round=5 layer=18: Columns of post-cache value tensor EQUAL with the previous round
+round=5 layer=19: pre-cache key tensor EQUAL to corresponding column in key tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 1, 256]) s.shape=torch.Size([1, 16, 1, 256]) 
+round=5 layer=19: Post-cache key tensors NOT EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 5, 256]) t_post_nocache.shape=torch.Size([1, 16, 5, 256]) 
+t_prev.shape=torch.Size([1, 16, 4, 256]) t_current.shape=torch.Size([1, 16, 5, 256]) s.shape=torch.Size([1, 16, 4, 256])
+round=5 layer=19: Columns of post-cache key tensor EQUAL with the previous round
+round=5 layer=19: pre-cache value tensor EQUAL to corresponding column in value tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 1, 256]) s.shape=torch.Size([1, 16, 1, 256]) 
+round=5 layer=19: Post-cache value tensors NOT EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 5, 256]) t_post_nocache.shape=torch.Size([1, 16, 5, 256]) 
+t_prev.shape=torch.Size([1, 16, 4, 256]) t_current.shape=torch.Size([1, 16, 5, 256]) s.shape=torch.Size([1, 16, 4, 256])
+round=5 layer=19: Columns of post-cache value tensor EQUAL with the previous round
+round=5 layer=20: pre-cache key tensor EQUAL to corresponding column in key tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 1, 256]) s.shape=torch.Size([1, 16, 1, 256]) 
+round=5 layer=20: Post-cache key tensors NOT EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 5, 256]) t_post_nocache.shape=torch.Size([1, 16, 5, 256]) 
+t_prev.shape=torch.Size([1, 16, 4, 256]) t_current.shape=torch.Size([1, 16, 5, 256]) s.shape=torch.Size([1, 16, 4, 256])
+round=5 layer=20: Columns of post-cache key tensor EQUAL with the previous round
+round=5 layer=20: pre-cache value tensor EQUAL to corresponding column in value tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 1, 256]) s.shape=torch.Size([1, 16, 1, 256]) 
+round=5 layer=20: Post-cache value tensors NOT EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 5, 256]) t_post_nocache.shape=torch.Size([1, 16, 5, 256]) 
+t_prev.shape=torch.Size([1, 16, 4, 256]) t_current.shape=torch.Size([1, 16, 5, 256]) s.shape=torch.Size([1, 16, 4, 256])
+round=5 layer=20: Columns of post-cache value tensor EQUAL with the previous round
+round=5 layer=21: pre-cache key tensor EQUAL to corresponding column in key tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 1, 256]) s.shape=torch.Size([1, 16, 1, 256]) 
+round=5 layer=21: Post-cache key tensors NOT EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 5, 256]) t_post_nocache.shape=torch.Size([1, 16, 5, 256]) 
+t_prev.shape=torch.Size([1, 16, 4, 256]) t_current.shape=torch.Size([1, 16, 5, 256]) s.shape=torch.Size([1, 16, 4, 256])
+round=5 layer=21: Columns of post-cache key tensor EQUAL with the previous round
+round=5 layer=21: pre-cache value tensor EQUAL to corresponding column in value tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 1, 256]) s.shape=torch.Size([1, 16, 1, 256]) 
+round=5 layer=21: Post-cache value tensors NOT EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 5, 256]) t_post_nocache.shape=torch.Size([1, 16, 5, 256]) 
+t_prev.shape=torch.Size([1, 16, 4, 256]) t_current.shape=torch.Size([1, 16, 5, 256]) s.shape=torch.Size([1, 16, 4, 256])
+round=5 layer=21: Columns of post-cache value tensor EQUAL with the previous round
+round=5 layer=22: pre-cache key tensor EQUAL to corresponding column in key tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 1, 256]) s.shape=torch.Size([1, 16, 1, 256]) 
+round=5 layer=22: Post-cache key tensors NOT EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 5, 256]) t_post_nocache.shape=torch.Size([1, 16, 5, 256]) 
+t_prev.shape=torch.Size([1, 16, 4, 256]) t_current.shape=torch.Size([1, 16, 5, 256]) s.shape=torch.Size([1, 16, 4, 256])
+round=5 layer=22: Columns of post-cache key tensor EQUAL with the previous round
+round=5 layer=22: pre-cache value tensor EQUAL to corresponding column in value tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 1, 256]) s.shape=torch.Size([1, 16, 1, 256]) 
+round=5 layer=22: Post-cache value tensors NOT EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 5, 256]) t_post_nocache.shape=torch.Size([1, 16, 5, 256]) 
+t_prev.shape=torch.Size([1, 16, 4, 256]) t_current.shape=torch.Size([1, 16, 5, 256]) s.shape=torch.Size([1, 16, 4, 256])
+round=5 layer=22: Columns of post-cache value tensor EQUAL with the previous round
+round=5 layer=23: pre-cache key tensor EQUAL to corresponding column in key tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 1, 256]) s.shape=torch.Size([1, 16, 1, 256]) 
+round=5 layer=23: Post-cache key tensors NOT EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 5, 256]) t_post_nocache.shape=torch.Size([1, 16, 5, 256]) 
+t_prev.shape=torch.Size([1, 16, 4, 256]) t_current.shape=torch.Size([1, 16, 5, 256]) s.shape=torch.Size([1, 16, 4, 256])
+round=5 layer=23: Columns of post-cache key tensor EQUAL with the previous round
+round=5 layer=23: pre-cache value tensor EQUAL to corresponding column in value tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 1, 256]) s.shape=torch.Size([1, 16, 1, 256]) 
+round=5 layer=23: Post-cache value tensors NOT EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 5, 256]) t_post_nocache.shape=torch.Size([1, 16, 5, 256]) 
+t_prev.shape=torch.Size([1, 16, 4, 256]) t_current.shape=torch.Size([1, 16, 5, 256]) s.shape=torch.Size([1, 16, 4, 256])
+round=5 layer=23: Columns of post-cache value tensor EQUAL with the previous round
+round=5 layer=24: pre-cache key tensor EQUAL to corresponding column in key tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 1, 256]) s.shape=torch.Size([1, 16, 1, 256]) 
+round=5 layer=24: Post-cache key tensors NOT EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 5, 256]) t_post_nocache.shape=torch.Size([1, 16, 5, 256]) 
+t_prev.shape=torch.Size([1, 16, 4, 256]) t_current.shape=torch.Size([1, 16, 5, 256]) s.shape=torch.Size([1, 16, 4, 256])
+round=5 layer=24: Columns of post-cache key tensor EQUAL with the previous round
+round=5 layer=24: pre-cache value tensor EQUAL to corresponding column in value tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 1, 256]) s.shape=torch.Size([1, 16, 1, 256]) 
+round=5 layer=24: Post-cache value tensors NOT EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 5, 256]) t_post_nocache.shape=torch.Size([1, 16, 5, 256]) 
+t_prev.shape=torch.Size([1, 16, 4, 256]) t_current.shape=torch.Size([1, 16, 5, 256]) s.shape=torch.Size([1, 16, 4, 256])
+round=5 layer=24: Columns of post-cache value tensor EQUAL with the previous round
+round=5 layer=25: pre-cache key tensor EQUAL to corresponding column in key tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 1, 256]) s.shape=torch.Size([1, 16, 1, 256]) 
+round=5 layer=25: Post-cache key tensors NOT EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 5, 256]) t_post_nocache.shape=torch.Size([1, 16, 5, 256]) 
+t_prev.shape=torch.Size([1, 16, 4, 256]) t_current.shape=torch.Size([1, 16, 5, 256]) s.shape=torch.Size([1, 16, 4, 256])
+round=5 layer=25: Columns of post-cache key tensor EQUAL with the previous round
+round=5 layer=25: pre-cache value tensor EQUAL to corresponding column in value tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 1, 256]) s.shape=torch.Size([1, 16, 1, 256]) 
+round=5 layer=25: Post-cache value tensors NOT EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 5, 256]) t_post_nocache.shape=torch.Size([1, 16, 5, 256]) 
+t_prev.shape=torch.Size([1, 16, 4, 256]) t_current.shape=torch.Size([1, 16, 5, 256]) s.shape=torch.Size([1, 16, 4, 256])
+round=5 layer=25: Columns of post-cache value tensor EQUAL with the previous round
+round=5 layer=26: pre-cache key tensor EQUAL to corresponding column in key tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 1, 256]) s.shape=torch.Size([1, 16, 1, 256]) 
+round=5 layer=26: Post-cache key tensors NOT EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 5, 256]) t_post_nocache.shape=torch.Size([1, 16, 5, 256]) 
+t_prev.shape=torch.Size([1, 16, 4, 256]) t_current.shape=torch.Size([1, 16, 5, 256]) s.shape=torch.Size([1, 16, 4, 256])
+round=5 layer=26: Columns of post-cache key tensor EQUAL with the previous round
+round=5 layer=26: pre-cache value tensor EQUAL to corresponding column in value tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 1, 256]) s.shape=torch.Size([1, 16, 1, 256]) 
+round=5 layer=26: Post-cache value tensors NOT EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 5, 256]) t_post_nocache.shape=torch.Size([1, 16, 5, 256]) 
+t_prev.shape=torch.Size([1, 16, 4, 256]) t_current.shape=torch.Size([1, 16, 5, 256]) s.shape=torch.Size([1, 16, 4, 256])
+round=5 layer=26: Columns of post-cache value tensor EQUAL with the previous round
+round=5 layer=27: pre-cache key tensor EQUAL to corresponding column in key tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 1, 256]) s.shape=torch.Size([1, 16, 1, 256]) 
+round=5 layer=27: Post-cache key tensors NOT EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 5, 256]) t_post_nocache.shape=torch.Size([1, 16, 5, 256]) 
+t_prev.shape=torch.Size([1, 16, 4, 256]) t_current.shape=torch.Size([1, 16, 5, 256]) s.shape=torch.Size([1, 16, 4, 256])
+round=5 layer=27: Columns of post-cache key tensor EQUAL with the previous round
+round=5 layer=27: pre-cache value tensor EQUAL to corresponding column in value tensor augmented with cache
+t_pre.shape=torch.Size([1, 16, 1, 256]) s.shape=torch.Size([1, 16, 1, 256]) 
+round=5 layer=27: Post-cache value tensors NOT EQUAL with dynamic cache and no cache
+t_post_dynamic.shape=torch.Size([1, 16, 5, 256]) t_post_nocache.shape=torch.Size([1, 16, 5, 256]) 
+t_prev.shape=torch.Size([1, 16, 4, 256]) t_current.shape=torch.Size([1, 16, 5, 256]) s.shape=torch.Size([1, 16, 4, 256])
+round=5 layer=27: Columns of post-cache value tensor EQUAL with the previous round
+Shape of t1: torch.Size([1, 1, 3072])
+Shape of t2: torch.Size([1, 1, 3072])
+Number of non-zero differences: 18 out of total 3072 elements
+Array of non-zero differences sorted by largest absolute difference:
+[[-2.7344e-02 -2.8320e-02  9.7656e-04  6.4000e+01]
+ [ 5.0244e-01  5.0293e-01  4.8828e-04  1.0000e+00]
+ [ 1.8262e-01  1.8274e-01  1.2207e-04  1.0000e+00]
+ [ 5.8105e-02  5.8228e-02  1.2207e-04  4.0000e+00]
+ [-6.2256e-03 -6.3477e-03  1.2207e-04  3.2000e+01]
+ [-1.9958e-01 -1.9946e-01  1.2207e-04  1.0000e+00]
+ [ 1.4893e-01  1.4880e-01  1.2207e-04  1.0000e+00]
+ [ 1.4929e-01  1.4941e-01  1.2207e-04  1.0000e+00]
+ [ 9.7656e-03  9.6436e-03  1.2207e-04  1.6000e+01]
+ [-6.0425e-03 -5.9814e-03  6.1035e-05  1.6000e+01]
+ [-5.4199e-02 -5.4260e-02  6.1035e-05  2.0000e+00]
+ [ 2.3865e-02  2.3804e-02  6.1035e-05  4.0000e+00]
+ [-5.0049e-03 -5.0354e-03  3.0518e-05  8.0000e+00]
+ [ 1.8860e-02  1.8829e-02  3.0518e-05  2.0000e+00]
+ [ 2.1317e-02  2.1301e-02  1.5259e-05  1.0000e+00]
+ [-1.4160e-02 -1.4175e-02  1.5259e-05  2.0000e+00]
+ [ 2.0935e-02  2.0920e-02  1.5259e-05  1.0000e+00]
+ [ 1.8311e-04  1.7548e-04  7.6294e-06  6.4000e+01]]
+Absolute Difference Statistics:
+Mean: 0.00014543533325195312
+Minimum: 7.62939453125e-06
+Maximum: 0.0009765625
+Median: 9.1552734375e-05
+Count of elements <= median: 9
+Percentage of elements <= median: 50.00%
+10th Percentile: 1.52587890625e-05
+20th Percentile: 2.1362304687500005e-05
+30th Percentile: 3.356933593749999e-05
+40th Percentile: 6.103515625e-05
+50th Percentile: 9.1552734375e-05
+60th Percentile: 0.0001220703125
+70th Percentile: 0.0001220703125
+80th Percentile: 0.0001220703125
+90th Percentile: 0.00023193359375000026
+
+Machine Epsilon Difference Statistics:
+Mean: 12.28125
+Minimum: 1.0
+Maximum: 64.0
+Median: 2.0
+Count of elements <= median: 10
+Percentage of elements <= median: 55.56%
+10th Percentile: 1.0
+20th Percentile: 1.0
+30th Percentile: 1.0
+40th Percentile: 1.8000000000000007
+50th Percentile: 2.0
+60th Percentile: 4.0
+70th Percentile: 7.599999999999994
+80th Percentile: 16.0
+90th Percentile: 41.60000000000002
+
+Comparing decoder stage input_layernorm
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=0: decoder intermediate result input_layernorm (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=1: decoder intermediate result input_layernorm (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=2: decoder intermediate result input_layernorm (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=3: decoder intermediate result input_layernorm (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=4: decoder intermediate result input_layernorm (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=5: decoder intermediate result input_layernorm (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=6: decoder intermediate result input_layernorm (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=7: decoder intermediate result input_layernorm (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=8: decoder intermediate result input_layernorm (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=9: decoder intermediate result input_layernorm (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=10: decoder intermediate result input_layernorm (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=11: decoder intermediate result input_layernorm (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=12: decoder intermediate result input_layernorm (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=13: decoder intermediate result input_layernorm (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=14: decoder intermediate result input_layernorm (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=15: decoder intermediate result input_layernorm (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=16: decoder intermediate result input_layernorm (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=17: decoder intermediate result input_layernorm (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=18: decoder intermediate result input_layernorm (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=19: decoder intermediate result input_layernorm (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=20: decoder intermediate result input_layernorm (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=21: decoder intermediate result input_layernorm (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=22: decoder intermediate result input_layernorm (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=23: decoder intermediate result input_layernorm (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=24: decoder intermediate result input_layernorm (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=25: decoder intermediate result input_layernorm (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=26: decoder intermediate result input_layernorm (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=27: decoder intermediate result input_layernorm (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=0: decoder intermediate result input_layernorm (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=1: decoder intermediate result input_layernorm (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=2: decoder intermediate result input_layernorm (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=3: decoder intermediate result input_layernorm (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=4: decoder intermediate result input_layernorm (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=5: decoder intermediate result input_layernorm (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=6: decoder intermediate result input_layernorm (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=7: decoder intermediate result input_layernorm (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=8: decoder intermediate result input_layernorm (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=9: decoder intermediate result input_layernorm (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=10: decoder intermediate result input_layernorm (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=11: decoder intermediate result input_layernorm (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=12: decoder intermediate result input_layernorm (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=13: decoder intermediate result input_layernorm (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=14: decoder intermediate result input_layernorm (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=15: decoder intermediate result input_layernorm (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=16: decoder intermediate result input_layernorm (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=17: decoder intermediate result input_layernorm (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=18: decoder intermediate result input_layernorm (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=19: decoder intermediate result input_layernorm (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=20: decoder intermediate result input_layernorm (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=21: decoder intermediate result input_layernorm (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=22: decoder intermediate result input_layernorm (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=23: decoder intermediate result input_layernorm (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=24: decoder intermediate result input_layernorm (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=25: decoder intermediate result input_layernorm (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=26: decoder intermediate result input_layernorm (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=27: decoder intermediate result input_layernorm (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Comparing decoder stage self_attention
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=0: decoder intermediate result self_attention (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=1: decoder intermediate result self_attention (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=2: decoder intermediate result self_attention (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=3: decoder intermediate result self_attention (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=4: decoder intermediate result self_attention (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=5: decoder intermediate result self_attention (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=6: decoder intermediate result self_attention (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=7: decoder intermediate result self_attention (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=8: decoder intermediate result self_attention (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=9: decoder intermediate result self_attention (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=10: decoder intermediate result self_attention (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=11: decoder intermediate result self_attention (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=12: decoder intermediate result self_attention (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=13: decoder intermediate result self_attention (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=14: decoder intermediate result self_attention (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=15: decoder intermediate result self_attention (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=16: decoder intermediate result self_attention (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=17: decoder intermediate result self_attention (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=18: decoder intermediate result self_attention (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=19: decoder intermediate result self_attention (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=20: decoder intermediate result self_attention (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=21: decoder intermediate result self_attention (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=22: decoder intermediate result self_attention (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=23: decoder intermediate result self_attention (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=24: decoder intermediate result self_attention (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=25: decoder intermediate result self_attention (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=26: decoder intermediate result self_attention (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=27: decoder intermediate result self_attention (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=0: decoder intermediate result self_attention (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=1: decoder intermediate result self_attention (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=2: decoder intermediate result self_attention (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=3: decoder intermediate result self_attention (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=4: decoder intermediate result self_attention (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=5: decoder intermediate result self_attention (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=6: decoder intermediate result self_attention (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=7: decoder intermediate result self_attention (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=8: decoder intermediate result self_attention (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=9: decoder intermediate result self_attention (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=10: decoder intermediate result self_attention (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=11: decoder intermediate result self_attention (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=12: decoder intermediate result self_attention (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=13: decoder intermediate result self_attention (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=14: decoder intermediate result self_attention (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=15: decoder intermediate result self_attention (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=16: decoder intermediate result self_attention (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=17: decoder intermediate result self_attention (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=18: decoder intermediate result self_attention (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=19: decoder intermediate result self_attention (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=20: decoder intermediate result self_attention (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=21: decoder intermediate result self_attention (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=22: decoder intermediate result self_attention (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=23: decoder intermediate result self_attention (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=24: decoder intermediate result self_attention (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=25: decoder intermediate result self_attention (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=26: decoder intermediate result self_attention (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=27: decoder intermediate result self_attention (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Comparing decoder stage attention_and_input
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=0: decoder intermediate result attention_and_input (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=1: decoder intermediate result attention_and_input (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=2: decoder intermediate result attention_and_input (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=3: decoder intermediate result attention_and_input (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=4: decoder intermediate result attention_and_input (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=5: decoder intermediate result attention_and_input (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=6: decoder intermediate result attention_and_input (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=7: decoder intermediate result attention_and_input (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=8: decoder intermediate result attention_and_input (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=9: decoder intermediate result attention_and_input (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=10: decoder intermediate result attention_and_input (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=11: decoder intermediate result attention_and_input (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=12: decoder intermediate result attention_and_input (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=13: decoder intermediate result attention_and_input (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=14: decoder intermediate result attention_and_input (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=15: decoder intermediate result attention_and_input (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=16: decoder intermediate result attention_and_input (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=17: decoder intermediate result attention_and_input (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=18: decoder intermediate result attention_and_input (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=19: decoder intermediate result attention_and_input (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=20: decoder intermediate result attention_and_input (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=21: decoder intermediate result attention_and_input (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=22: decoder intermediate result attention_and_input (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=23: decoder intermediate result attention_and_input (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=24: decoder intermediate result attention_and_input (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=25: decoder intermediate result attention_and_input (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=26: decoder intermediate result attention_and_input (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=27: decoder intermediate result attention_and_input (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=0: decoder intermediate result attention_and_input (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=1: decoder intermediate result attention_and_input (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=2: decoder intermediate result attention_and_input (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=3: decoder intermediate result attention_and_input (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=4: decoder intermediate result attention_and_input (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=5: decoder intermediate result attention_and_input (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=6: decoder intermediate result attention_and_input (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=7: decoder intermediate result attention_and_input (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=8: decoder intermediate result attention_and_input (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=9: decoder intermediate result attention_and_input (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=10: decoder intermediate result attention_and_input (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=11: decoder intermediate result attention_and_input (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=12: decoder intermediate result attention_and_input (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=13: decoder intermediate result attention_and_input (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=14: decoder intermediate result attention_and_input (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=15: decoder intermediate result attention_and_input (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=16: decoder intermediate result attention_and_input (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=17: decoder intermediate result attention_and_input (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=18: decoder intermediate result attention_and_input (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=19: decoder intermediate result attention_and_input (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=20: decoder intermediate result attention_and_input (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=21: decoder intermediate result attention_and_input (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=22: decoder intermediate result attention_and_input (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=23: decoder intermediate result attention_and_input (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=24: decoder intermediate result attention_and_input (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=25: decoder intermediate result attention_and_input (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=26: decoder intermediate result attention_and_input (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=27: decoder intermediate result attention_and_input (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Comparing decoder stage post_attention_layernorm
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=0: decoder intermediate result post_attention_layernorm (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=1: decoder intermediate result post_attention_layernorm (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=2: decoder intermediate result post_attention_layernorm (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=3: decoder intermediate result post_attention_layernorm (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=4: decoder intermediate result post_attention_layernorm (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=5: decoder intermediate result post_attention_layernorm (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=6: decoder intermediate result post_attention_layernorm (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=7: decoder intermediate result post_attention_layernorm (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=8: decoder intermediate result post_attention_layernorm (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=9: decoder intermediate result post_attention_layernorm (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=10: decoder intermediate result post_attention_layernorm (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=11: decoder intermediate result post_attention_layernorm (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=12: decoder intermediate result post_attention_layernorm (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=13: decoder intermediate result post_attention_layernorm (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=14: decoder intermediate result post_attention_layernorm (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=15: decoder intermediate result post_attention_layernorm (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=16: decoder intermediate result post_attention_layernorm (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=17: decoder intermediate result post_attention_layernorm (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=18: decoder intermediate result post_attention_layernorm (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=19: decoder intermediate result post_attention_layernorm (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=20: decoder intermediate result post_attention_layernorm (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=21: decoder intermediate result post_attention_layernorm (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=22: decoder intermediate result post_attention_layernorm (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=23: decoder intermediate result post_attention_layernorm (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=24: decoder intermediate result post_attention_layernorm (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=25: decoder intermediate result post_attention_layernorm (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=26: decoder intermediate result post_attention_layernorm (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=27: decoder intermediate result post_attention_layernorm (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=0: decoder intermediate result post_attention_layernorm (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=1: decoder intermediate result post_attention_layernorm (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=2: decoder intermediate result post_attention_layernorm (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=3: decoder intermediate result post_attention_layernorm (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=4: decoder intermediate result post_attention_layernorm (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=5: decoder intermediate result post_attention_layernorm (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=6: decoder intermediate result post_attention_layernorm (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=7: decoder intermediate result post_attention_layernorm (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=8: decoder intermediate result post_attention_layernorm (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=9: decoder intermediate result post_attention_layernorm (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=10: decoder intermediate result post_attention_layernorm (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=11: decoder intermediate result post_attention_layernorm (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=12: decoder intermediate result post_attention_layernorm (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=13: decoder intermediate result post_attention_layernorm (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=14: decoder intermediate result post_attention_layernorm (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=15: decoder intermediate result post_attention_layernorm (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=16: decoder intermediate result post_attention_layernorm (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=17: decoder intermediate result post_attention_layernorm (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=18: decoder intermediate result post_attention_layernorm (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=19: decoder intermediate result post_attention_layernorm (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=20: decoder intermediate result post_attention_layernorm (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=21: decoder intermediate result post_attention_layernorm (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=22: decoder intermediate result post_attention_layernorm (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=23: decoder intermediate result post_attention_layernorm (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=24: decoder intermediate result post_attention_layernorm (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=25: decoder intermediate result post_attention_layernorm (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=26: decoder intermediate result post_attention_layernorm (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=27: decoder intermediate result post_attention_layernorm (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Numeric differences in post_attention_layernorm (when divergence first occurs)
+Shape of t1: torch.Size([1, 1, 3072])
+Shape of t2: torch.Size([1, 1, 3072])
+Number of non-zero differences: 0 out of total 3072 elements
+Array of non-zero differences sorted by largest absolute difference:
+[]
+Absolute Difference Statistics:
+Mean: nan
