@@ -1255,6 +1255,571 @@ Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5
 round=5 layer=26: decoder intermediate result post_attention_layernorm (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
 Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
 round=5 layer=27: decoder intermediate result post_attention_layernorm (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Comparing decoder stage mlp_gate
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=0: decoder intermediate result mlp_gate (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=1: decoder intermediate result mlp_gate (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=2: decoder intermediate result mlp_gate (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=3: decoder intermediate result mlp_gate (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=4: decoder intermediate result mlp_gate (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=5: decoder intermediate result mlp_gate (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=6: decoder intermediate result mlp_gate (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=7: decoder intermediate result mlp_gate (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=8: decoder intermediate result mlp_gate (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=9: decoder intermediate result mlp_gate (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=10: decoder intermediate result mlp_gate (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=11: decoder intermediate result mlp_gate (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=12: decoder intermediate result mlp_gate (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=13: decoder intermediate result mlp_gate (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=14: decoder intermediate result mlp_gate (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=15: decoder intermediate result mlp_gate (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=16: decoder intermediate result mlp_gate (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=17: decoder intermediate result mlp_gate (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=18: decoder intermediate result mlp_gate (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=19: decoder intermediate result mlp_gate (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=20: decoder intermediate result mlp_gate (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=21: decoder intermediate result mlp_gate (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=22: decoder intermediate result mlp_gate (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=23: decoder intermediate result mlp_gate (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=24: decoder intermediate result mlp_gate (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=25: decoder intermediate result mlp_gate (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=26: decoder intermediate result mlp_gate (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=27: decoder intermediate result mlp_gate (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=0: decoder intermediate result mlp_gate (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=1: decoder intermediate result mlp_gate (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=2: decoder intermediate result mlp_gate (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=3: decoder intermediate result mlp_gate (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=4: decoder intermediate result mlp_gate (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=5: decoder intermediate result mlp_gate (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=6: decoder intermediate result mlp_gate (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=7: decoder intermediate result mlp_gate (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=8: decoder intermediate result mlp_gate (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=9: decoder intermediate result mlp_gate (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=10: decoder intermediate result mlp_gate (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=11: decoder intermediate result mlp_gate (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=12: decoder intermediate result mlp_gate (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=13: decoder intermediate result mlp_gate (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=14: decoder intermediate result mlp_gate (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=15: decoder intermediate result mlp_gate (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=16: decoder intermediate result mlp_gate (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=17: decoder intermediate result mlp_gate (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=18: decoder intermediate result mlp_gate (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=19: decoder intermediate result mlp_gate (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=20: decoder intermediate result mlp_gate (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=21: decoder intermediate result mlp_gate (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=22: decoder intermediate result mlp_gate (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=23: decoder intermediate result mlp_gate (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=24: decoder intermediate result mlp_gate (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=25: decoder intermediate result mlp_gate (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=26: decoder intermediate result mlp_gate (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=27: decoder intermediate result mlp_gate (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Comparing decoder stage mlp_act
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=0: decoder intermediate result mlp_act (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=1: decoder intermediate result mlp_act (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=2: decoder intermediate result mlp_act (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=3: decoder intermediate result mlp_act (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=4: decoder intermediate result mlp_act (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=5: decoder intermediate result mlp_act (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=6: decoder intermediate result mlp_act (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=7: decoder intermediate result mlp_act (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=8: decoder intermediate result mlp_act (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=9: decoder intermediate result mlp_act (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=10: decoder intermediate result mlp_act (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=11: decoder intermediate result mlp_act (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=12: decoder intermediate result mlp_act (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=13: decoder intermediate result mlp_act (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=14: decoder intermediate result mlp_act (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=15: decoder intermediate result mlp_act (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=16: decoder intermediate result mlp_act (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=17: decoder intermediate result mlp_act (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=18: decoder intermediate result mlp_act (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=19: decoder intermediate result mlp_act (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=20: decoder intermediate result mlp_act (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=21: decoder intermediate result mlp_act (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=22: decoder intermediate result mlp_act (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=23: decoder intermediate result mlp_act (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=24: decoder intermediate result mlp_act (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=25: decoder intermediate result mlp_act (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=26: decoder intermediate result mlp_act (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=27: decoder intermediate result mlp_act (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=0: decoder intermediate result mlp_act (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=1: decoder intermediate result mlp_act (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=2: decoder intermediate result mlp_act (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=3: decoder intermediate result mlp_act (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=4: decoder intermediate result mlp_act (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=5: decoder intermediate result mlp_act (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=6: decoder intermediate result mlp_act (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=7: decoder intermediate result mlp_act (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=8: decoder intermediate result mlp_act (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=9: decoder intermediate result mlp_act (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=10: decoder intermediate result mlp_act (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=11: decoder intermediate result mlp_act (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=12: decoder intermediate result mlp_act (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=13: decoder intermediate result mlp_act (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=14: decoder intermediate result mlp_act (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=15: decoder intermediate result mlp_act (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=16: decoder intermediate result mlp_act (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=17: decoder intermediate result mlp_act (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=18: decoder intermediate result mlp_act (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=19: decoder intermediate result mlp_act (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=20: decoder intermediate result mlp_act (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=21: decoder intermediate result mlp_act (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=22: decoder intermediate result mlp_act (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=23: decoder intermediate result mlp_act (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=24: decoder intermediate result mlp_act (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=25: decoder intermediate result mlp_act (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=26: decoder intermediate result mlp_act (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=27: decoder intermediate result mlp_act (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Comparing decoder stage mlp_up
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=0: decoder intermediate result mlp_up (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=1: decoder intermediate result mlp_up (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=2: decoder intermediate result mlp_up (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=3: decoder intermediate result mlp_up (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=4: decoder intermediate result mlp_up (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=5: decoder intermediate result mlp_up (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=6: decoder intermediate result mlp_up (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=7: decoder intermediate result mlp_up (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=8: decoder intermediate result mlp_up (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=9: decoder intermediate result mlp_up (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=10: decoder intermediate result mlp_up (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=11: decoder intermediate result mlp_up (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=12: decoder intermediate result mlp_up (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=13: decoder intermediate result mlp_up (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=14: decoder intermediate result mlp_up (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=15: decoder intermediate result mlp_up (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=16: decoder intermediate result mlp_up (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=17: decoder intermediate result mlp_up (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=18: decoder intermediate result mlp_up (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=19: decoder intermediate result mlp_up (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=20: decoder intermediate result mlp_up (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=21: decoder intermediate result mlp_up (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=22: decoder intermediate result mlp_up (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=23: decoder intermediate result mlp_up (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=24: decoder intermediate result mlp_up (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=25: decoder intermediate result mlp_up (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=26: decoder intermediate result mlp_up (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=27: decoder intermediate result mlp_up (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=0: decoder intermediate result mlp_up (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=1: decoder intermediate result mlp_up (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=2: decoder intermediate result mlp_up (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=3: decoder intermediate result mlp_up (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=4: decoder intermediate result mlp_up (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=5: decoder intermediate result mlp_up (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=6: decoder intermediate result mlp_up (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=7: decoder intermediate result mlp_up (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=8: decoder intermediate result mlp_up (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=9: decoder intermediate result mlp_up (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=10: decoder intermediate result mlp_up (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=11: decoder intermediate result mlp_up (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=12: decoder intermediate result mlp_up (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=13: decoder intermediate result mlp_up (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=14: decoder intermediate result mlp_up (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=15: decoder intermediate result mlp_up (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=16: decoder intermediate result mlp_up (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=17: decoder intermediate result mlp_up (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=18: decoder intermediate result mlp_up (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=19: decoder intermediate result mlp_up (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=20: decoder intermediate result mlp_up (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=21: decoder intermediate result mlp_up (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=22: decoder intermediate result mlp_up (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=23: decoder intermediate result mlp_up (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=24: decoder intermediate result mlp_up (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=25: decoder intermediate result mlp_up (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=26: decoder intermediate result mlp_up (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=27: decoder intermediate result mlp_up (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Comparing decoder stage mlp_mul
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=0: decoder intermediate result mlp_mul (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=1: decoder intermediate result mlp_mul (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=2: decoder intermediate result mlp_mul (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=3: decoder intermediate result mlp_mul (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=4: decoder intermediate result mlp_mul (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=5: decoder intermediate result mlp_mul (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=6: decoder intermediate result mlp_mul (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=7: decoder intermediate result mlp_mul (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=8: decoder intermediate result mlp_mul (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=9: decoder intermediate result mlp_mul (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=10: decoder intermediate result mlp_mul (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=11: decoder intermediate result mlp_mul (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=12: decoder intermediate result mlp_mul (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=13: decoder intermediate result mlp_mul (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=14: decoder intermediate result mlp_mul (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=15: decoder intermediate result mlp_mul (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=16: decoder intermediate result mlp_mul (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=17: decoder intermediate result mlp_mul (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=18: decoder intermediate result mlp_mul (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=19: decoder intermediate result mlp_mul (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=20: decoder intermediate result mlp_mul (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=21: decoder intermediate result mlp_mul (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=22: decoder intermediate result mlp_mul (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=23: decoder intermediate result mlp_mul (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=24: decoder intermediate result mlp_mul (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=25: decoder intermediate result mlp_mul (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=26: decoder intermediate result mlp_mul (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 24576]) t_ref.shape=torch.Size([1, 4, 24576])
+PREFILL round=4 layer=27: decoder intermediate result mlp_mul (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=0: decoder intermediate result mlp_mul (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=1: decoder intermediate result mlp_mul (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=2: decoder intermediate result mlp_mul (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=3: decoder intermediate result mlp_mul (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=4: decoder intermediate result mlp_mul (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=5: decoder intermediate result mlp_mul (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=6: decoder intermediate result mlp_mul (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=7: decoder intermediate result mlp_mul (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=8: decoder intermediate result mlp_mul (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=9: decoder intermediate result mlp_mul (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=10: decoder intermediate result mlp_mul (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=11: decoder intermediate result mlp_mul (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=12: decoder intermediate result mlp_mul (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=13: decoder intermediate result mlp_mul (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=14: decoder intermediate result mlp_mul (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=15: decoder intermediate result mlp_mul (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=16: decoder intermediate result mlp_mul (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=17: decoder intermediate result mlp_mul (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=18: decoder intermediate result mlp_mul (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=19: decoder intermediate result mlp_mul (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=20: decoder intermediate result mlp_mul (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=21: decoder intermediate result mlp_mul (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=22: decoder intermediate result mlp_mul (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=23: decoder intermediate result mlp_mul (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=24: decoder intermediate result mlp_mul (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=25: decoder intermediate result mlp_mul (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=26: decoder intermediate result mlp_mul (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 24576]) t_ref.shape=torch.Size([1, 5, 24576])
+round=5 layer=27: decoder intermediate result mlp_mul (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Comparing decoder stage mlp_down
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=0: decoder intermediate result mlp_down (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=1: decoder intermediate result mlp_down (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=2: decoder intermediate result mlp_down (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=3: decoder intermediate result mlp_down (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=4: decoder intermediate result mlp_down (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=5: decoder intermediate result mlp_down (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=6: decoder intermediate result mlp_down (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=7: decoder intermediate result mlp_down (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=8: decoder intermediate result mlp_down (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=9: decoder intermediate result mlp_down (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=10: decoder intermediate result mlp_down (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=11: decoder intermediate result mlp_down (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=12: decoder intermediate result mlp_down (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=13: decoder intermediate result mlp_down (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=14: decoder intermediate result mlp_down (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=15: decoder intermediate result mlp_down (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=16: decoder intermediate result mlp_down (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=17: decoder intermediate result mlp_down (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=18: decoder intermediate result mlp_down (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=19: decoder intermediate result mlp_down (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=20: decoder intermediate result mlp_down (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=21: decoder intermediate result mlp_down (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=22: decoder intermediate result mlp_down (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=23: decoder intermediate result mlp_down (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=24: decoder intermediate result mlp_down (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=25: decoder intermediate result mlp_down (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=26: decoder intermediate result mlp_down (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+PREFILL round=4 layer=27: decoder intermediate result mlp_down (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=0: decoder intermediate result mlp_down (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=1: decoder intermediate result mlp_down (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=2: decoder intermediate result mlp_down (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=3: decoder intermediate result mlp_down (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=4: decoder intermediate result mlp_down (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=5: decoder intermediate result mlp_down (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=6: decoder intermediate result mlp_down (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=7: decoder intermediate result mlp_down (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=8: decoder intermediate result mlp_down (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=9: decoder intermediate result mlp_down (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=10: decoder intermediate result mlp_down (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=11: decoder intermediate result mlp_down (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=12: decoder intermediate result mlp_down (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=13: decoder intermediate result mlp_down (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=14: decoder intermediate result mlp_down (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=15: decoder intermediate result mlp_down (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=16: decoder intermediate result mlp_down (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=17: decoder intermediate result mlp_down (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=18: decoder intermediate result mlp_down (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=19: decoder intermediate result mlp_down (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=20: decoder intermediate result mlp_down (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=21: decoder intermediate result mlp_down (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=22: decoder intermediate result mlp_down (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=23: decoder intermediate result mlp_down (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=24: decoder intermediate result mlp_down (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=25: decoder intermediate result mlp_down (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=26: decoder intermediate result mlp_down (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
+Tensor shapes: t_dyn.shape=torch.Size([1, 1, 3072]) t_ref.shape=torch.Size([1, 5, 3072])
+round=5 layer=27: decoder intermediate result mlp_down (dynamic caching) NOT EQUAL to corresponding column in intermediate result tensor without cache
 Numeric differences in post_attention_layernorm (when divergence first occurs)
 Shape of t1: torch.Size([1, 1, 3072])
 Shape of t2: torch.Size([1, 1, 3072])
