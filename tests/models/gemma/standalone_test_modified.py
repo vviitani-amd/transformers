@@ -7,7 +7,7 @@ from transformers.testing_utils import (
 from globals import GlobalVariables
 import pickle
 
-def save_global_variables(filename="global_tensors_MI300.pt"):
+def save_global_variables(filename="global_tensors_H100.pt"):
     torch.save(GlobalVariables.tensor_dict,filename)
 
 
