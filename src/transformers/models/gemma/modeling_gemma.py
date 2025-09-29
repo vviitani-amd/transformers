@@ -83,8 +83,9 @@ class GemmaRMSNorm(nn.Module):
 
         GlobalVariables.tensor_dict.setdefault("rsqrt_output", {})
      
-
-        input=x.pow(2).mean(-1, keepdim=True) + self.eps
+        pow=x.pow(2)
+        mean=pow.mean(-1, keepdim=True)
+        input=mean + self.eps
         rsqrt=torch.rsqrt(input)
 
         GlobalVariables.tensor_dict.setdefault("rsqrt_input", {})
@@ -93,6 +94,22 @@ class GemmaRMSNorm(nn.Module):
             GlobalVariables.tensor_dict["rsqrt_input"].setdefault(GlobalVariables.cache_id,{})       
             GlobalVariables.tensor_dict["rsqrt_input"][GlobalVariables.cache_id].setdefault(GlobalVariables.cur_len,{})
             GlobalVariables.tensor_dict["rsqrt_input"][GlobalVariables.cache_id][GlobalVariables.cur_len][GlobalVariables.layer_idx] = input.clone()
+
+        GlobalVariables.tensor_dict.setdefault("rsqrt_input_pow", {})
+     
+        if GlobalVariables.cur_len <= GlobalVariables.output_length_cutoff:
+            GlobalVariables.tensor_dict["rsqrt_input_pow"].setdefault(GlobalVariables.cache_id,{})       
+            GlobalVariables.tensor_dict["rsqrt_input_pow"][GlobalVariables.cache_id].setdefault(GlobalVariables.cur_len,{})
+            GlobalVariables.tensor_dict["rsqrt_input_pow"][GlobalVariables.cache_id][GlobalVariables.cur_len][GlobalVariables.layer_idx] = pow.clone()
+
+        GlobalVariables.tensor_dict.setdefault("rsqrt_input_mean", {})
+     
+        if GlobalVariables.cur_len <= GlobalVariables.output_length_cutoff:
+            GlobalVariables.tensor_dict["rsqrt_input_mean"].setdefault(GlobalVariables.cache_id,{})       
+            GlobalVariables.tensor_dict["rsqrt_input_mean"][GlobalVariables.cache_id].setdefault(GlobalVariables.cur_len,{})
+            GlobalVariables.tensor_dict["rsqrt_input_mean"][GlobalVariables.cache_id][GlobalVariables.cur_len][GlobalVariables.layer_idx] = mean.clone()
+
+
 
         GlobalVariables.tensor_dict.setdefault("rsqrt_output", {})
      
