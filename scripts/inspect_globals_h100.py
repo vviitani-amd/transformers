@@ -338,8 +338,7 @@ if __name__ == "__main__":
     # that is, output_length=5, output of layer #0 = input to layer #1
 
     characterize_tensor_differences(GlobalVariables.tensor_dict["hidden_states"]["dynamic"][5][1], GlobalVariables.tensor_dict["hidden_states"]["no_cache"][5][1][:,-1:,:])   
-
     check_decoder_internals()
 
-    print("Numeric differences in post_attention_layernorm (when divergence first occurs)")
-    characterize_tensor_differences(GlobalVariables.tensor_dict["post_attention_layernorm"]["dynamic"][5][0], GlobalVariables.tensor_dict["post_attention_layernorm"]["no_cache"][5][0][:,-1:,:])   
+    print("Numeric differences in mlp_down (when divergence first occurs)")
+    characterize_tensor_differences(GlobalVariables.tensor_dict["mlp_down"]["dynamic"][5][0], GlobalVariables.tensor_dict["mlp_down"]["no_cache"][5][0][:,-1:,:])   
