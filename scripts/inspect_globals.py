@@ -184,11 +184,11 @@ def compare_hidden_states(*,round:int, layer:int):
         result="NOT EQUAL"            
 
     print(f"{prefill_indicator}{round=} {layer=}: input hidden state (dynamic caching) {result} to corresponding column in hidden state tensor without cache")
-    
+
 
 def print_statistics(vector: np.ndarray, description: str):
     """
-    Prints out statistics for a given input vector, including median, specified percentiles, 
+    Prints out statistics for a given input vector, including median, specified percentiles,
     the count of elements that are at most as large as the median, and the percentage of such elements.
 
     Parameters:
@@ -222,7 +222,8 @@ def characterize_tensor_differences(t1: torch.Tensor, t2: torch.Tensor):
     """
     Prints and collects non-zero differences between two torch tensors into a two-dimensional numpy array.
     Each row contains the element value from t1, the element value from t2, the absolute difference,
-    and the difference in machine epsilons. The rows are sorted by the largest absolute difference.
+    the difference in machine epsilons (float16), and the difference in machine epsilons (float32).
+    The rows are sorted by the largest absolute difference.
 
     Parameters:
     t1 (torch.Tensor): The first input tensor.
@@ -257,15 +258,19 @@ def characterize_tensor_differences(t1: torch.Tensor, t2: torch.Tensor):
     values_t2 = t2[nonzero_mask].numpy()
     abs_diff_values = absolute_difference[nonzero_mask].numpy()
 
-    # Calculate epsilon using np.nextafter directly
-    epsilon_t1 = np.nextafter(values_t1, np.inf, dtype=np.float16) - values_t1
-    epsilon_t2 = np.nextafter(values_t2, np.inf, dtype=np.float16) - values_t2
+    # Calculate epsilon using np.nextafter directly for float16
+    epsilon_t1_float16 = np.nextafter(values_t1, np.inf, dtype=np.float16) - values_t1
+    epsilon_t2_float16 = np.nextafter(values_t2, np.inf, dtype=np.float16) - values_t2
+    diff_machine_epsilons_float16 = abs_diff_values / np.minimum(epsilon_t1_float16, epsilon_t2_float16)
 
-    # Calculate the difference in machine epsilons
-    diff_machine_epsilons = abs_diff_values / np.minimum(epsilon_t1, epsilon_t2)
+    # Calculate epsilon using np.nextafter directly for float32
+    epsilon_t1_float32 = np.nextafter(values_t1, np.inf, dtype=np.float32) - values_t1
+    epsilon_t2_float32 = np.nextafter(values_t2, np.inf, dtype=np.float32) - values_t2
+    diff_machine_epsilons_float32 = abs_diff_values / np.minimum(epsilon_t1_float32, epsilon_t2_float32)
 
     # Combine values into a numpy array
-    differences_array = np.vstack((values_t1, values_t2, abs_diff_values, diff_machine_epsilons)).T
+    differences_array = np.vstack((values_t1, values_t2, abs_diff_values, 
+                                   diff_machine_epsilons_float16, diff_machine_epsilons_float32)).T
 
     # Sort the array by absolute differences, largest first
     sorted_indices = np.argsort(differences_array[:, 2])[::-1]
@@ -279,8 +284,12 @@ def characterize_tensor_differences(t1: torch.Tensor, t2: torch.Tensor):
     # Print statistics for absolute differences
     print_statistics(abs_diff_values, "Absolute Difference")
 
-    # Print statistics for machine epsilon differences
-    print_statistics(diff_machine_epsilons, "Machine Epsilon Difference")
+    # Print statistics for machine epsilon differences (float16)
+    print_statistics(diff_machine_epsilons_float16, "Machine Epsilon Difference (float16)")
+
+    # Print statistics for machine epsilon differences (float32)
+    print_statistics(diff_machine_epsilons_float32, "Machine Epsilon Difference (float32)")
+
 
 def compare_decoder_result(result_id:str):
 
