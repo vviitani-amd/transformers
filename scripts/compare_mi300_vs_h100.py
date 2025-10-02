@@ -19,16 +19,16 @@ def hidden_state_checks():
 
     d1 = tensors_mi300
     d2 = tensors_h100
+    for id in ["no_cache","dynamic"]:
+        print(f"Comparing hidden states ({id=})")
 
-    print(f"Comparing hidden states ({id=})")
-
-    for len in d1["hidden_states"][id]:
-        for layer_idx,t in d1["hidden_states"][id][len].items():
-            t2=d2["hidden_states"][id][len][layer_idx]
-            result="EQUAL" if torch.all(torch.eq(t,t2)) else "NOT EQUAL"
-#         #     
-            print(f"{len=} {layer_idx=} hidden state tensor shape: {t.shape}(MI300) {t2.shape}(H100) {result}")  
-        # print(t) 
+        for len in d1["hidden_states"][id]:
+            for layer_idx,t in d1["hidden_states"][id][len].items():
+                t2=d2["hidden_states"][id][len][layer_idx]
+                result="EQUAL" if torch.all(torch.eq(t,t2)) else "NOT EQUAL"
+    #         #     
+                print(f"{len=} {layer_idx=} hidden state tensor shape: {t.shape}(MI300) {t2.shape}(H100) {result}")  
+            # print(t) 
 #         # if len-1 in GlobalVariables.tensor_dict["hidden_states"][id]:
 #         #     slice=t[:,:-1,:]
 #         #     print(f"{slice.shape=}")
