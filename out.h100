@@ -1754,7 +1754,7 @@ Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4
 PREFILL round=4 layer=21: decoder intermediate result mlp_down (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
 Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
 PREFILL round=4 layer=22: decoder intermediate result mlp_down (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
-Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
+Tensor shapes: t_dyn.s33333333333333333hape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
 PREFILL round=4 layer=23: decoder intermediate result mlp_down (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
 Tensor shapes: t_dyn.shape=torch.Size([1, 4, 3072]) t_ref.shape=torch.Size([1, 4, 3072])
 PREFILL round=4 layer=24: decoder intermediate result mlp_down (dynamic caching) EQUAL to corresponding column in intermediate result tensor without cache
