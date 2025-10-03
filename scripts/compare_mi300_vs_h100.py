@@ -299,47 +299,50 @@ def characterize_tensor_differences(t1: torch.Tensor, t2: torch.Tensor):
     print_statistics(diff_machine_epsilons_float32, "Machine Epsilon Difference (float32)")
 
 
-def compare_decoder_result(result_id:str):
+def compare_decoder_result(result_id:str,*,layer_idx:int, length:int):
 
-    print(f"Comparing decoder stage {result_id}")
-    for round in GlobalVariables.tensor_dict[result_id]["dynamic"]:
-        for layer in GlobalVariables.tensor_dict[result_id]["dynamic"][round]:
-            prefill=False
-            prefill_indicator=""
-            if round==4:
-                prefill=True
-                prefill_indicator="PREFILL "
+    prefill_indicator=""
+    if round==4:
+        prefill_indicator="PREFILL "
 
-            t_dyn=GlobalVariables.tensor_dict[result_id]["dynamic"][round][layer]
-            t_ref=GlobalVariables.tensor_dict[result_id]["no_cache"][round][layer]
+    d1 = tensors_mi300
+    d2 = tensors_h100
+    for id in ["no_cache","dynamic"]:
 
-            print(f"Tensor shapes: {t_dyn.shape=} {t_ref.shape=}")
-            
-            if prefill:
-                s=t_ref
-            else:        
-                s=t_ref[:,-1:,:]
+        t1=d1[result_id][id][length][layer_idx]
+        t2=d2[result_id][id][length][layer_idx]
 
-            if torch.all(torch.eq(t_dyn,s)):
-                result="EQUAL"
-            else:
-                result="NOT EQUAL"            
+        #print(f"Tensor shapes: {t_dyn.shape=} {t_ref.shape=}")
+    
+        if torch.all(torch.eq(t1,t2)):
+            result="EQUAL"
+        else:
+            result="NOT EQUAL"            
 
-            print(f"{prefill_indicator}{round=} {layer=}: decoder intermediate result {result_id} (dynamic caching) {result} to corresponding column in intermediate result tensor without cache")
+        print(f"{prefill_indicator} {id=} {round=} {layer_idx=}: decoder intermediate result {result_id} {result} on MI300 and H100")
 
 
 def check_decoder_internals():
 
-    compare_decoder_result("input_layernorm")
-    compare_decoder_result("self_attention")
-    compare_decoder_result("attention_and_input") 
-    compare_decoder_result("post_attention_layernorm")
-    compare_decoder_result("norm_input")
-    compare_decoder_result("rsqrt_input_pow")
-    compare_decoder_result("rsqrt_input_mean")
-    compare_decoder_result("rsqrt_input")
-    compare_decoder_result("rsqrt_output")
-    compare_decoder_result("norm_raw_output")
+    length=4
+    layer_idx=0
+
+    compare_decoder_result("input_layernorm", length=length, layer_idx = layer_idx)
+    compare_decoder_result("self_attention", length=length, layer_idx = layer_idx)
+    compare_decoder_result("attention_and_input", length=length, layer_idx = layer_idx) 
+    compare_decoder_result("post_attention_layernorm", length=length, layer_idx = layer_idx)
+    compare_decoder_result("norm_input", length=length, layer_idx = layer_idx)
+    compare_decoder_result("rsqrt_input_pow", length=length, layer_idx = layer_idx)
+    compare_decoder_result("rsqrt_input_mean", length=length, layer_idx = layer_idx)
+    compare_decoder_result("rsqrt_input", length=length, layer_idx = layer_idx)
+    compare_decoder_result("rsqrt_output", length=length, layer_idx = layer_idx)
+    compare_decoder_result("norm_raw_output", length=length, layer_idx = layer_idx)
+    compare_decoder_result("mlp_gate", length=length, layer_idx = layer_idx)
+    compare_decoder_result("mlp_act", length=length, layer_idx = layer_idx)
+    compare_decoder_result("mlp_up", length=length, layer_idx = layer_idx)
+    compare_decoder_result("mlp_mul", length=length, layer_idx = layer_idx)
+    compare_decoder_result("mlp_down", length=length, layer_idx = layer_idx)
+
 
 
 if __name__ == "__main__":
@@ -349,6 +352,7 @@ if __name__ == "__main__":
     # Step 2: Perform analysis on the class-level variables
     hidden_state_checks()
 
+    # show statistics of the first differing hidden state
     d1 = tensors_mi300
     d2 = tensors_h100
     for id in ["no_cache","dynamic"]:
