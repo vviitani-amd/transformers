@@ -348,6 +348,19 @@ if __name__ == "__main__":
     
     # Step 2: Perform analysis on the class-level variables
     hidden_state_checks()
+
+    d1 = tensors_mi300
+    d2 = tensors_h100
+    for id in ["no_cache","dynamic"]:
+        print(f" Hidden state difference statistics ({id=})")
+
+        length=4
+        layer_idx=1
+
+        t1=d1["hidden_states"][id][length][layer_idx]
+        t2=d2["hidden_states"][id][length][layer_idx]
+
+        characterize_tensor_differences(t1,t2)
     # # compare the hidden state between dynamic caching and no cache  when the divergence first appears
     # # that is, output_length=5, output of layer #6 = input to layer #7
 
